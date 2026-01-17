@@ -28,15 +28,18 @@ View your app in AI Studio: https://ai.studio/apps/drive/1U6-L0_20gURXnL-Z2ORZJv
 1. **在 GitHub 仓库中启用 Pages**：
    - 进入仓库的 **Settings**（设置）
    - 点击左侧的 **Pages**
-   - 在 **Source** 部分，选择 **GitHub Actions** 作为部署源
+   - 在 **Source** 部分，选择 **Deploy from a branch**
+   - 选择 **gh-pages** 分支和 **/ (root)** 文件夹
+   - 点击 **Save**
 
 2. **推送代码到 main 或 master 分支**：
-   - 当你推送代码到 `main` 或 `master` 分支时，GitHub Actions 会自动触发构建和部署
+   - 当你推送代码到 `main` 或 `master` 分支时，GitHub Actions 会自动触发构建和部署到 `gh-pages` 分支
    - 也可以手动触发：在 **Actions** 标签页选择 **Deploy to GitHub Pages** workflow，点击 **Run workflow**
 
 3. **等待部署完成**：
    - 在 **Actions** 标签页查看部署进度
    - 部署完成后，你的网站将在 `https://<your-username>.github.io/urban-survival-simulation/` 上可用
+   - 首次部署可能需要几分钟才能生效
 
 ### 注意事项：
 
