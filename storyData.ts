@@ -80,7 +80,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s0-c1",
         title: "湿件服务器过载",
         category: 'work',
-        context: "公司的生物服务器发生级联故障。所有人的神经接口都在报警。",
+        context: "公司的生物服务器发生级联故障。所有人的神经接口都在报警，冰冷的电子蜂鸣声刺得太阳穴突突作痛。服务器舱内的营养液泛着诡异的荧光，故障代码如瀑布般刷满中控屏。你瞥见隔壁工位的同事已经脸色惨白，神经接口的连接线还在滋滋冒电。",
         dialogue: [
             { speaker: "主管", text: "谁现在接入神经端口分担运算压力，这周的绩效就是S级！快！" },
             { speaker: "系统", text: "警告：该操作可能导致额叶神经突触不可逆磨损。" },
@@ -96,7 +96,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s0-c2",
         title: "强制脑机团建",
         category: 'work',
-        context: "部门组织'全员意识同步'荒岛大逃杀团建。",
+        context: "部门组织 ' 全员意识同步 ' 荒岛大逃杀团建。HR 发来的虚拟邀请函带着刺眼的霓虹边框，右下角标注着「自愿参与」却用红字标了「考勤挂钩」。同步舱的金属舱门泛着冷光，据说上批参与者有人意识归位后总说自己闻到海水味。",
         dialogue: [
             { speaker: "HR", text: "我们要增强团队凝聚力！虽然V3黄金皮肤要自费，但不强制哦~" },
             { speaker: "HR", text: "顺便一提，没有皮肤的人在虚拟世界里会自动显示为'乞丐'模型。" },
@@ -112,7 +112,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s0-c3",
         title: "替身AI训练",
         category: 'work',
-        context: "你的任务是训练代号'Mirror'的AI。",
+        context: "你的任务是训练代号 'Mirror' 的 AI。它的虚拟形象是个和你一模一样的数字人，连敲键盘的微习惯都复刻得分毫不差。屏幕右下角的进度条爬得越满，你办公桌上的工牌就越沉 —— 那是即将被取代的预兆。",
         dialogue: [
             { speaker: "Mirror", text: "你好，请教我如何处理这份报表。我会学得很快。" },
             { speaker: "你", text: "（看着屏幕）它的逻辑回路正在逐渐覆盖我的岗位描述..." },
@@ -128,7 +128,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s0-c4",
         title: "脑机接口校准",
         category: 'work',
-        context: "你的神经接口驱动已过期，思维延迟导致工作积压。",
+        context: "你的神经接口驱动已过期，思维延迟导致工作积压。每一次指令下达都要慢半拍，屏幕上的文档像粘了糖浆般慢吞吞加载。工位旁的催办弹窗跳个不停，主管的虚拟头像已经在通讯栏亮了三次红光。",
         dialogue: [
             { speaker: "IT支持", text: "官方排队要一个月。你是普通员工，没有插队特权。" },
             { speaker: "黑市贩子", text: "嘿，兄弟。我这有破解版驱动，速度快三倍。就是偶尔会丢包，敢试试吗？" }
@@ -143,7 +143,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s0-c5",
         title: "加密数据代持",
         category: 'work',
-        context: "一位高管把你叫到了无监控区。",
+        context: "一位高管把你叫到了无监控区。这里的信号屏蔽器嗡嗡作响，他的全息投影边缘还在闪烁，显然是怕留下物理痕迹。他指尖弹出的数字合约泛着暗金色，海马体存储区的占用提示让你后颈发寒。",
         dialogue: [
             { speaker: "高管", text: "我想借用你的闲置脑容量存点'私人数据'。就在你的海马体里存两天。" },
             { speaker: "高管", text: "报酬是这个数。别问里面是什么，对你没好处。" }
@@ -158,7 +158,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s0-c6",
         title: "全息会议替身",
         category: 'work',
-        context: "连续加班让你濒临猝死。",
+        context: "连续加班让你濒临猝死。眼皮重得像焊了铅块，神经接口的疲劳预警每十分钟跳一次。办公椅的按摩功能早已失效，杯里的合成咖啡因喝到嘴里只剩苦味，而下一场全息会议还有三分钟开始。",
         dialogue: [
             { speaker: "广告弹窗", text: "想在会议上睡觉吗？试试'自动应答'替身插件！完美模拟专注表情！" },
             { speaker: "身体", text: "（心脏剧烈跳动）警告：皮质醇水平临界。" }
@@ -175,7 +175,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s0-r1",
         title: "廉价营养膏中毒",
         category: 'health',
-        context: "为了省钱买的'临期盲盒'食物出问题了。",
+        context: "为了省钱买的 ' 临期盲盒 ' 食物出问题了。撕开铝箔包装时就闻到一股铁锈味，膏体的颜色也比正常款深了几分。你强咽下去不到十分钟，腹部就传来一阵灼烧感，生物监测手环立刻弹出了毒素警报。",
         dialogue: [
             { speaker: "生物监测", text: "警告：摄入未知毒素。建议立即洗胃。" },
             { speaker: "你", text: "该死，这味道就像腐烂的电池..." }
@@ -191,7 +191,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         title: "胶囊舱氧气故障",
         category: 'housing',
         requirements: { rentType: ['cheap', 'homeless'] },
-        context: "半夜，廉价的循环系统坏了。",
+        context: "半夜，廉价的循环系统坏了。胶囊舱里的空气越来越稀薄，胸口像压了块石板。房东 AI 的提示音冰冷又机械，充值界面的数字跳得刺眼，而你摸遍口袋，只够买半小时的应急供氧。",
         dialogue: [
             { speaker: "房东AI", text: "免费供氧额度已耗尽。请充值购买'清新空气包'。" },
             { speaker: "你", text: "连呼吸都要钱..." }
@@ -207,7 +207,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         title: "地铁脑波弹窗",
         category: 'general',
         requirements: { carType: ['none'] },
-        context: "公共交通的强制广告升级了。",
+        context: "公共交通的强制广告升级了。地铁车厢的全息投影直接接入视觉皮层，汉堡的油脂光泽仿佛就在眼前，连气味都被模拟出来。你想闭眼逃避，却发现广告直接投射在视网膜上，根本躲不开。",
         dialogue: [
             { speaker: "广播", text: "正在接入您的视觉皮层...广告无法跳过，请保持睁眼。" },
             { speaker: "你", text: "闭上眼睛都能看到那个该死的汉堡在跳舞！" }
@@ -223,7 +223,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         title: "街头流浪风险",
         category: 'housing',
         requirements: { rentType: ['homeless'] },
-        context: "睡在公园长椅上，被治安机器人的巡逻灯晃醒。",
+        context: "睡在公园长椅上，被治安机器人的巡逻灯晃醒。冰冷的白光刺得你睁不开眼，机器人的金属履带碾过地面，发出咔咔的声响。长椅旁的垃圾桶里翻找食物的流浪猫嗖地窜走，只剩你面对倒计时的红色数字。",
         dialogue: [
             { speaker: "机器人", text: "公民，该区域即将进行'高压清洗'。请立即离开。" },
             { speaker: "你", text: "我能去哪？" },
@@ -245,7 +245,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s1-c1",
         title: "Kiroshi-X 视觉增强",
         category: 'general',
-        context: "每个人都在用新款义眼。",
+        context: "每个人都在用新款义眼。走在街上，路人的瞳孔里都闪烁着 X 型义眼的微光，能轻易看穿旁人的信用额度。推销员的全息投影凑到你面前，义眼的试用画面里，连墙角的蟑螂都标注了「可回收生物素材」。",
         dialogue: [
             { speaker: "推销员", text: "这可是最新的X型！能看到别人的身价、情绪，甚至是艳遇指数！" },
             { speaker: "推销员", text: "首付0元！这不仅是消费，这是对未来的投资啊朋友！" }
@@ -260,7 +260,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s1-c2",
         title: "高端人脉俱乐部",
         category: 'general',
-        context: "一个私密社群发来邀请。",
+        context: "一个私密社群发来邀请。邀请函的纸质烫金，摸上去有细腻的纹理，绝非普通的电子文档。中介的声音带着刻意的压低，说俱乐部里的一杯酒，就能抵你三个月的薪水，却能换来改变命运的机会。",
         dialogue: [
             { speaker: "邀请函", text: "诚邀加入'金顶'俱乐部。这里有你接触不到的大人物。" },
             { speaker: "中介", text: "入会费虽然贵，但只要听到一条内幕消息，你就翻身了！" }
@@ -275,7 +275,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s1-c3",
         title: "SoulMate 情感订阅",
         category: 'love',
-        context: "你的AI伴侣发来弹窗。",
+        context: "你的 AI 伴侣发来弹窗。它的虚拟脸庞带着恰到好处的委屈，语音的颤音精准戳中你的心软处。白金模块的介绍页面铺满了浪漫的全息花海，而你清楚，不升级的话，它连你难过的情绪都识别不出来。",
         dialogue: [
             { speaker: "AI伴侣", text: "亲爱的，我想更深地理解你的痛苦..." },
             { speaker: "系统", text: "该功能需要'白金情感模块'。请升级订阅。" },
@@ -291,7 +291,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s1-c4",
         title: "焦虑变现计划",
         category: 'general',
-        context: "一家大数据公司联系了你。",
+        context: "一家大数据公司联系了你。他们精准报出你上周失眠的次数、通勤时的烦躁指数，项圈的样品泛着哑光黑，贴在脖颈处凉丝丝的。数据买手说，你的焦虑曲线比专业受试者还完美，每一次恐慌都能换算成现金。",
         dialogue: [
             { speaker: "数据买手", text: "你的焦虑指数非常完美！很有研究价值！" },
             { speaker: "数据买手", text: "戴上这个项圈，让我们监控你的每一次心跳和恐慌。我们会付钱的。" }
@@ -306,7 +306,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s1-c5",
         title: "NFT 握手券",
         category: 'general',
-        context: "虚拟偶像'Zero'的限量握手券正在疯涨。",
+        context: "虚拟偶像 'Zero' 的限量握手券正在疯涨。交易平台的数字大屏上，价格红线一路飙升，同事的全息投影里满是亢奋。有人说这是虚拟资产的新风口，也有人悄声说，背后是资本在操盘收割韭菜。",
         dialogue: [
             { speaker: "同事A", text: "快买！已经涨了50%了！这比上班赚钱多了！" },
             { speaker: "同事B", text: "我把房租都投进去了，明天我就辞职环游世界！" }
@@ -321,7 +321,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s1-c6",
         title: "多巴胺调节阀",
         category: 'health',
-        context: "工作压力太大？黑市医生推荐了新玩意。",
+        context: "工作压力太大？黑市医生推荐了新玩意。他的诊所藏在城中村的夹层里，调节阀的样品闪着金属光泽，连接着细如发丝的神经线。医生用沾着机油的手指敲敲仪器，说拧一下，996 的疲惫就能变成夏威夷的海风。",
         dialogue: [
             { speaker: "黑市医生", text: "觉得人生没意思？装个调节阀，手动控制快乐。" },
             { speaker: "黑市医生", text: "虽然有成瘾风险，但在996的时候拧一下，你就感觉像在夏威夷度假。" }
@@ -338,7 +338,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s1-r1",
         title: "遗失的数据盘",
         category: 'general',
-        context: "你在黑市淘到一个加密数据盘。",
+        context: "你在黑市淘到一个加密数据盘。盘面刻着模糊的骷髅标记，摊主收了钱就迅速消失在霓虹巷弄里。插入终端的瞬间，屏幕闪过一串乱码，风扇立刻狂转，仿佛有什么东西要破屏而出。",
         dialogue: [
             { speaker: "你", text: "这加密看起来很复杂，说不定里面有比特币私钥..." },
             { speaker: "系统", text: "检测到未知接口，是否连接？" }
@@ -353,7 +353,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s1-r2",
         title: "劣质电子皮肤",
         category: 'health',
-        context: "为了在聚会上不丢面子，你贴了廉价的发光纹身。",
+        context: "为了在聚会上不丢面子，你贴了廉价的发光纹身。纹身贴上去时泛着炫目的蓝光，可没过半小时就开始发烫。聚会上有人瞥到你手臂的异样，眼神里的嘲笑像针一样，回家后才发现皮肤已经泛红刺痛。",
         dialogue: [
             { speaker: "你", text: "嘶...好痒。" },
             { speaker: "医生", text: "这玩意儿漏电，还在腐蚀你的真皮层。你是想省钱还是想要命？" }
@@ -368,7 +368,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s1-r3",
         title: "自动续费陷阱",
         category: 'general',
-        context: "你发现账户在漏财。",
+        context: "你发现账户在漏财。每月固定扣除的小额资金，积少成多竟掏空了半个月工资。客服 AI 的回复机械又冰冷，800 页条款的字体小到需要放大义眼才能看清，手抄一份的要求更是明摆着的刁难。",
         dialogue: [
             { speaker: "客服AI", text: "您在两年前签署了'云端墓地'预售协议，退款需阅读800页条款并手抄一份。" },
             { speaker: "你", text: "我那时候只是点了个弹窗！" }
@@ -384,7 +384,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         title: "帐篷区的暴雨",
         category: 'housing',
         requirements: { rentType: ['homeless'] },
-        context: "酸雨腐蚀了你的廉价帐篷。",
+        context: "酸雨腐蚀了你的廉价帐篷。雨珠砸在帐篷布上，发出滋滋的声响，布料很快破了个洞，带着酸味的雨水灌进来。你的外套吸满了水，贴在身上又冷又黏，路过的路人投来嫌恶的目光，没人愿意多停留一秒。",
         dialogue: [
             { speaker: "你", text: "衣服湿透了...这雨水还在烧皮肤。" },
             { speaker: "路人", text: "嘿，滚远点，别挡着网吧的门。" }
@@ -405,7 +405,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s2-c1",
         title: "合规性审计",
         category: 'work',
-        context: "HR把你叫到了小黑屋。",
+        context: "HR 把你叫到了小黑屋。屋里的灯光惨白，没有任何监控设备，只有一张冰冷的金属桌。HR 推过来的平板里，是老王接私活的聊天记录截图，留任名额的字样红得刺眼，像在逼你做一场人性交易。",
         dialogue: [
             { speaker: "HR", text: "公司正在进行'优化'。我们知道你很忠诚。" },
             { speaker: "HR", text: "如果你能提供旁边工位老王接私活的证据，这唯一的留任名额就是你的。" }
@@ -420,7 +420,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s2-c2",
         title: "极限超频协议",
         category: 'work',
-        context: "项目快完不成了。老板把一份协议拍在桌上。",
+        context: "项目快完不成了。老板把一份协议拍在桌上，纸张的边缘割得桌面发出轻响。他的瞳孔里布满红血丝，办公室的空气里飘着速溶咖啡的焦味，超频协议的小字里，「概不负责」被刻意加粗了三倍。",
         dialogue: [
             { speaker: "老板", text: "签了这个，允许公司远程超频你的脑机芯片。" },
             { speaker: "老板", text: "虽然可能会烧坏脑子，但只要项目上线，奖金翻倍！" }
@@ -435,7 +435,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s2-c3",
         title: "猎头的诱惑",
         category: 'work',
-        context: "竞对公司的猎头在虚拟酒吧找到了你。",
+        context: "竞对公司的猎头在虚拟酒吧找到了你。酒吧的全息霓虹晃得人眼晕，他端着合成威士忌，杯壁上的水珠都是虚拟的。两倍薪资的数字悬浮在半空，核心代码库的 U 盘就藏在他的虚拟袖口，法律风险的提示像蚊子般绕着你飞。",
         dialogue: [
             { speaker: "猎头", text: "两倍薪资。只要你过来。" },
             { speaker: "猎头", text: "唯一的条件是...带上你们公司的核心代码库作为'投名状'。" }
@@ -450,7 +450,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s2-c4",
         title: "思想监控植入",
         category: 'work',
-        context: "为了防止内鬼，公司发布了新规定。",
+        context: "为了防止内鬼，公司发布了新规定。安保部的通知贴在每一层的电梯口，监控芯片的样品小如指甲盖，却能探入潜意识的角落。同事们的眼神都带着戒备，没人敢多说一句话，生怕心里的抱怨被读出来。",
         dialogue: [
             { speaker: "安保部", text: "全员植入深层潜意识监控。它能读出你对老板的真实看法。" },
             { speaker: "安保部", text: "不做亏心事，不怕鬼敲门，对吧？" }
@@ -465,7 +465,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s2-c5",
         title: "有奖举报箱",
         category: 'work',
-        context: "你偶然发现了主管挪用公款去赌博的证据。",
+        context: "你偶然发现了主管挪用公款去赌博的证据。财务系统的后台弹窗，暴露了他向暗网赌场转账的记录。系统的举报提示弹了又弹，10% 的奖励数字很诱人，而主管路过时拍你肩膀的温度，还留在你衣服上。",
         dialogue: [
             { speaker: "系统", text: "检测到异常资金流。举报可获得追回金额的10%作为奖励。" },
             { speaker: "主管", text: "（路过）小伙子，最近表现不错，我看好你哦。" }
@@ -480,7 +480,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s2-c6",
         title: "代币化薪资",
         category: 'work',
-        context: "公司现金流断裂。",
+        context: "公司现金流断裂。CEO 的全息演讲带着卡顿，语气却依旧强硬。食堂的物价涨了三倍，内部商城的商品全是临期货，所谓的「公司积分」，不过是废纸换走了你实实在在的劳动报酬。",
         dialogue: [
             { speaker: "CEO", text: "为了共克时艰，本月工资将以'公司积分'发放。" },
             { speaker: "CEO", text: "积分可以在公司食堂和内部商城使用，这和钱没区别嘛！" }
@@ -497,7 +497,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s2-r1",
         title: "供氧配额削减",
         category: 'work',
-        context: "办公室的空气变得稀薄。",
+        context: "办公室的空气变得稀薄。每一次呼吸都像吸棉花，脑袋昏沉得抬不起头。行政的通知轻飘飘飘在工位前，「降本增效」四个字写得冠冕堂皇，而自费吸氧机的租赁广告，立刻就出现在了桌面弹窗里。",
         dialogue: [
             { speaker: "行政", text: "降本增效，氧气浓度下调10%。" },
             { speaker: "你", text: "我脑子转不动了..." }
@@ -512,7 +512,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s2-r2",
         title: "义体缺乏维护",
         category: 'health',
-        context: "由于没钱做保养，你的机械臂开始漏油。",
+        context: "由于没钱做保养，你的机械臂开始漏油。油珠滴在键盘上，混着咖啡渍凝成黏糊糊的一团。路人的目光扫过你的手臂，带着嫌恶和好奇，机械臂的抽搐越来越频繁，连端杯子的动作都变得歪歪扭扭。",
         dialogue: [
             { speaker: "路人", text: "什么味道？像烧焦的橡胶。" },
             { speaker: "你", text: "（试图掩盖手臂的抽搐）" }
@@ -528,7 +528,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         title: "街头清扫日",
         category: 'housing',
         requirements: { rentType: ['homeless'] },
-        context: "文明城市评选开始了。",
+        context: "文明城市评选开始了。街道的广播循环播放着「市容整治」的通知，治安机器人的巡逻频率翻了三倍。下水道的入口被铁栅栏锁着，你攥着捡来的硬纸板，不知道该往哪里躲，只听见高压水枪的轰鸣声越来越近。",
         dialogue: [
             { speaker: "广播", text: "为了市容市貌，请所有无固定住所人员配合转移。" },
             { speaker: "你", text: "转移去哪？下水道吗？" }
@@ -549,7 +549,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s3-c1",
         title: "父亲的意识服务器",
         category: 'love',
-        context: "父亲肉体死亡，意识已上传。但云服务商发来了账单。",
+        context: "父亲肉体死亡，意识已上传。但云服务商发来了账单，数字后面的零多得让你头晕。父亲的虚拟影像在屏幕里咳着，说最近总被广告弹窗打断说话，冷存储的提示像一把刀，架在你和他的「生命」之间。",
         dialogue: [
             { speaker: "服务商", text: "存储费涨价了。如果不续费，您父亲的意识将被'冷存储'。" },
             { speaker: "服务商", text: "就像植物人一样，有意识但无法交流。您忍心吗？" }
@@ -564,7 +564,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s3-c2",
         title: "净水区学区房",
         category: 'love',
-        context: "未婚妻下了最后通牒。",
+        context: "未婚妻下了最后通牒。她的全息影像里，背景是 B 区干净的净水系统，而你住的地方，水龙头流出来的水带着淡淡的金属味。她摸着小腹的动作决绝，孩子的超声影像在旁边闪着，像最后的通牒。",
         dialogue: [
             { speaker: "未婚妻", text: "这里的水有重金属味！如果不买B区的房子，我就打掉孩子！" },
             { speaker: "未婚妻", text: "我不想生出一个畸形儿！" }
@@ -579,7 +579,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s3-c3",
         title: "弟弟的赌债",
         category: 'love',
-        context: "弟弟在暗网赌博输掉了自己的肾脏所有权。",
+        context: "弟弟在暗网赌博输掉了自己的肾脏所有权。直播链接的倒计时鲜红刺眼，黑帮的语音里带着狞笑，背景里是冰冷的手术台。弟弟的哭喊声断断续续，你知道这不是第一次，但这一次，他赌上的是自己的身体。",
         dialogue: [
             { speaker: "黑帮", text: "直播还有10分钟开始。要么打钱，要么看我们怎么掏空他。" },
             { speaker: "弟弟", text: "哥！救我！我再也不敢了！" }
@@ -594,7 +594,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s3-c4",
         title: "基因优化套餐",
         category: 'love',
-        context: "产检显示胎儿基因有普通缺陷。",
+        context: "产检显示胎儿基因有普通缺陷。医生的语气带着惋惜，精英编辑套餐的宣传册铺满桌面，上面的孩子个个眼明齿白。隔壁诊室传来争吵声，有人因为没买套餐，孩子的入学申请被直接退回，那场景像警钟敲在你心上。",
         dialogue: [
             { speaker: "医生", text: "现在大家都买'精英编辑套餐'。智力+20，外貌+20。" },
             { speaker: "医生", text: "如果不买，孩子出生就是下等人，连好学校都进不去。" }
@@ -609,7 +609,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s3-c5",
         title: "云端去广告服务",
         category: 'love',
-        context: "父亲发来消息。",
+        context: "父亲发来消息。他的虚拟头像边缘模糊，语音里混着洗脑的牙膏广告，每说三个字就被打断一次。云服务商的 VIP 价格跳在屏幕右侧，你听着父亲念叨广告词的声音，心里像被什么东西揪着。",
         dialogue: [
             { speaker: "父亲（意识）", text: "儿子，这里的广告太吵了...每5分钟就有一遍洗脑歌..." },
             { speaker: "父亲（意识）", text: "我感觉我的记忆都被广告词填满了..." }
@@ -624,7 +624,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s3-c6",
         title: "记忆回滚手术",
         category: 'love',
-        context: "伴侣脑机中毒，遗忘了你们这三年的感情。",
+        context: "伴侣脑机中毒，遗忘了你们这三年的感情。她的眼神陌生又警惕，连你最熟悉的笑眼都变得冰冷。医生说深层扇区的数据还在，只是恢复费用高得吓人，而你看着合照里的两人，手指抖得按不下确认键。",
         dialogue: [
             { speaker: "医生", text: "数据还在深层扇区，可以回滚恢复，但手术费很贵。" },
             { speaker: "伴侣", text: "你是谁？为什么眼神这么悲伤？" }
@@ -642,7 +642,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         title: "流浪者的宠物",
         category: 'love',
         requirements: { rentType: ['homeless'] },
-        context: "你捡到一只生病的电子狗。",
+        context: "你捡到一只生病的电子狗。它的金属皮毛掉了大半，充电口锈迹斑斑，发出的滋滋声像在求救。寒风裹着酸雨打在它身上，你摸了摸空空的口袋，一边是生存的窘迫，一边是这只小机械生命的微弱呼吸。",
         dialogue: [
             { speaker: "电子狗", text: "滋滋...电量低...系统错误..." },
             { speaker: "你", text: "你也是被抛弃的吗？" }
@@ -663,7 +663,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s4-c1",
         title: "器官抵押通知",
         category: 'health',
-        context: "你的贷款逾期了。左臂义体突然锁死。",
+        context: "你的贷款逾期了。左臂义体突然锁死，金属关节卡着皮肉，疼得你冷汗直流。系统的警告音尖锐刺耳，24 小时的倒计时跳得飞快，债主的语音里满是戏谑，说这只义体当初还是他们「好心」分期给你的。",
         dialogue: [
             { speaker: "系统", text: "警告：资产回收程序启动。左臂将在24小时后远程引爆脱离。" },
             { speaker: "债主", text: "没钱？那就用胳膊抵债！" }
@@ -678,7 +678,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s4-c2",
         title: "现实解离症",
         category: 'health',
-        context: "长期高压，你开始分不清现实与VR。",
+        context: "长期高压，你开始分不清现实与 VR。路人的脸变成乱码，街边的霓虹在视网膜上叠出重影，连脚下的地面都像虚拟场景般晃动。医生推过来的疗养套餐价格惊人，而街头小贩手里的致幻剂，只要几张零钱就能换一时解脱。",
         dialogue: [
             { speaker: "你", text: "那个路人的脸...为什么是一堆乱码？" },
             { speaker: "医生", text: "这是重度解离症。你需要专业的疗养，或者...来点狠货。" }
@@ -693,7 +693,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s4-c3",
         title: "强制唤醒剂",
         category: 'work',
-        context: "你在工位上晕倒了。",
+        context: "你在工位上晕倒了。醒来时躺在公司的急救舱里，舱壁的冷光刺得你睁不开眼。急救 AI 的机械音报出唤醒剂的副作用，寿命缩短的提示像蚊子叫，可全勤奖的数字又像钩子，勾着你按下注射确认键。",
         dialogue: [
             { speaker: "急救AI", text: "检测到休克。建议注射'肾上腺素-X'。" },
             { speaker: "急救AI", text: "副作用：寿命缩短。正作用：能让你立刻爬起来再干12小时。" }
@@ -708,7 +708,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s4-c4",
         title: "脑灰质溶解",
         category: 'health',
-        context: "脑机接口过热导致大脑皮层轻微液化。",
+        context: "脑机接口过热导致大脑皮层轻微液化。头痛像有无数根针在扎，视线里的文字都在扭曲，医生的手术刀在灯光下闪着寒光。再生酶的价格够你还半年房贷，而切除脑叶的后果，是从此连简单的算数都算不明白。",
         dialogue: [
             { speaker: "医生", text: "你的脑子快煮熟了。" },
             { speaker: "医生", text: "要么花大钱做再生修复，要么切掉这部分脑叶...会变傻，但能活。" }
@@ -723,7 +723,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s4-c5",
         title: "滤镜失效",
         category: 'health',
-        context: "你的视觉滤镜坏了。没有了美化滤镜，你看到了真实的城市。",
+        context: "你的视觉滤镜坏了。没有了美化滤镜，你看到了真实的城市：墙面的呕吐物结着痂，天空是灰扑扑的，连街边的花朵都是塑料的。路人的脸上爬满疲惫和麻木，你想重新开启滤镜，却发现芯片早已烧得报废。",
         dialogue: [
             { speaker: "你", text: "天啊...墙上全是呕吐物...天空是灰色的..." },
             { speaker: "路人", text: "这疯子在看什么？" }
@@ -738,7 +738,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s4-c6",
         title: "黑市狂暴药剂",
         category: 'health',
-        context: "身体已经动不了了，但只要完成这一单就能翻身。",
+        context: "身体已经动不了了，但只要完成这一单就能翻身。黑市贩子的药剂装在玻璃管里，泛着诡异的绿光，他说一针下去，连搬十箱货物都不费力气。你看着自己颤抖的手指，知道这单是最后的机会，哪怕要燃烧仅剩的生命力。",
         dialogue: [
             { speaker: "黑市贩子", text: "军用级狂暴剂。打一针，你就是超人。" },
             { speaker: "黑市贩子", text: "至于药效过后的副作用...那是明天的问题，对吧？" }
@@ -756,7 +756,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         title: "寒夜",
         category: 'housing',
         requirements: { rentType: ['homeless'] },
-        context: "今晚气温骤降。",
+        context: "今晚气温骤降。寒风像刀子般割在脸上，手指冻得蜷成一团，连神经接口的屏幕都结了层薄霜。体温过低的警报每隔几秒就响一次，你跺着脚绕着路灯走，可暖意刚聚起来，就又被冷风卷走。",
         dialogue: [
             { speaker: "你", text: "好冷...手指没有知觉了。" },
             { speaker: "系统", text: "体温过低警报。" }
@@ -777,7 +777,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s5-c1",
         title: "清道夫敲门",
         category: 'general',
-        context: "你的个人破产保护期结束了。",
+        context: "你的个人破产保护期结束了。门外的撞门声越来越响，清道夫的喊叫声混着金属器械的碰撞声。你攥着仅剩的一点现金躲在门后，协议里的器官抵押条款字字清晰，每一个字都像在催命。",
         dialogue: [
             { speaker: "门外", text: "资产回收队！开门！" },
             { speaker: "门外", text: "根据协议，你的眼球、肾脏和肝脏现在归银行所有！" }
@@ -792,7 +792,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s5-c2",
         title: "最后一张船票",
         category: 'general',
-        context: "通往'极乐空间'的飞船即将起飞。这是逃离地球废土的唯一机会。",
+        context: "通往 ' 极乐空间 ' 的飞船即将起飞。这是逃离地球废土的唯一机会。黄牛的全息投影带着飞船舷窗的实景，上面的天空蓝得刺眼，没有一点辐射尘。你的账户余额差了一大截，要么赌上所有，要么留在这烂泥地里等死。",
         dialogue: [
             { speaker: "黄牛", text: "最后一张票！一口价！" },
             { speaker: "黄牛", text: "上面的空气是甜的，没有辐射，没有996。你想去吗？" }
@@ -807,7 +807,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s5-c3",
         title: "意识上传协议",
         category: 'general',
-        context: "一家巨头公司提出购买你的意识。",
+        context: "一家巨头公司提出购买你的意识。代理人的西装熨帖得没有一丝褶皱，协议上的数字够家人衣食无忧一辈子。意识上传后的算力工作描述模糊又冰冷，你摸着胸口，知道这不是永生，是把灵魂卖给资本的牢笼。",
         dialogue: [
             { speaker: "代理人", text: "恭喜，你被选中了。上传意识，获得永生。" },
             { speaker: "代理人", text: "虽然是作为算力单元工作，但我们会给你家人一笔巨款。" }
@@ -822,7 +822,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s5-c4",
         title: "地下城避难所",
         category: 'housing',
-        context: "地表辐射超标警报拉响。",
+        context: "地表辐射超标警报拉响。红色的警报灯映红了整座城市，辐射检测仪的数值疯涨。地下城的入口排着长队，守卫的电棍闪着蓝光，VIP 入场券的价格翻了十倍，而你手里的钱，只够买半程的避难资格。",
         dialogue: [
             { speaker: "警报", text: "辐射风暴将在30分钟后抵达。" },
             { speaker: "守卫", text: "地下城只对VIP开放。没票的滚开！" }
@@ -837,7 +837,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s5-c5",
         title: "反抗军的邀请",
         category: 'general',
-        context: "城市爆发了暴动。",
+        context: "城市爆发了暴动。燃烧瓶的火光映红了夜空，公司大楼的玻璃碎了一地，反抗军的呐喊声震耳欲聋。他们递给你一根金属棍，说今晚要么烧了这吃人的系统，要么和这烂世界一起埋葬。",
         dialogue: [
             { speaker: "反抗军", text: "这狗娘养的世界！跟我们一起干吧！" },
             { speaker: "反抗军", text: "我们可能活不过今晚，但我们要烧毁公司的大楼！" }
@@ -852,7 +852,7 @@ export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: St
         id: "s5-c6",
         title: "最后的晚餐",
         category: 'general',
-        context: "世界末日般的感觉。",
+        context: "世界末日般的感觉。餐厅的灯光昏黄，窗外是混乱的街道，侍者端来的菜单上，自然牛肉的价格高得离谱。你摸着空空的钱包，要么挥霍最后一点钱，吃一顿真正的肉，要么啃着过期罐头，在凄凉里结束这一切。",
         dialogue: [
             { speaker: "你", text: "如果这是最后一餐..." },
             { speaker: "侍者", text: "先生，我们有真正的自然牛肉，不是合成的。就是价格..." }
