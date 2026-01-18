@@ -34,26 +34,26 @@ export const BGM_PLAYLIST = {
 
 // SFX Constants
 export const SFX_SOURCES = {
-    TYPING: "https://cdn.pixabay.com/download/audio/2022/03/24/audio_c8c8a73467.mp3", 
+    TYPING: "/assets/audio/typing-data.mp3", 
     TYPING_DATA: "/assets/audio/typing-data.mp3",
     COMMS_IN: "/assets/audio/comms-in.mp3",
-    MESSAGE_NEXT: "https://assets.mixkit.co/active_storage/sfx/2346/2346-preview.mp3",
-    DAMAGE_IMPACT: "https://assets.mixkit.co/active_storage/sfx/214/214-preview.mp3"
+    MESSAGE_NEXT: "/assets/audio/typing-data.mp3",
+    DAMAGE_IMPACT: "/assets/audio/typing-data.mp3"
 };
 
 // Audio Sources
 export const AUDIO_SOURCES = {
-    [BGM_PLAYLIST.INTRO]: "https://cdn.pixabay.com/download/audio/2022/03/15/audio_732b132338.mp3",
-    [BGM_PLAYLIST.DEFAULT]: "https://cdn.pixabay.com/download/audio/2021/11/24/audio_8253185362.mp3",
-    [BGM_PLAYLIST.WORK]: "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3",
-    [BGM_PLAYLIST.LOVE]: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_65905d4756.mp3",
-    [BGM_PLAYLIST.HOUSING]: "https://cdn.pixabay.com/download/audio/2023/06/26/audio_349692d77d.mp3",
-    [BGM_PLAYLIST.HEALTH]: "https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3",
-    [BGM_PLAYLIST.MORAL]: "https://cdn.pixabay.com/download/audio/2021/09/06/audio_223403a464.mp3",
-    [BGM_PLAYLIST.SUMMARY]: "https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3",
-    [BGM_PLAYLIST.ENDING_BAD]: "https://cdn.pixabay.com/download/audio/2022/04/27/audio_67bcf729cb.mp3",
-    [BGM_PLAYLIST.ENDING_SURVIVAL]: "https://cdn.pixabay.com/download/audio/2022/02/07/audio_1963968214.mp3",
-    [BGM_PLAYLIST.ENDING_SUCCESS]: "https://cdn.pixabay.com/download/audio/2022/05/16/audio_db6591201e.mp3",
+    [BGM_PLAYLIST.INTRO]: "/assets/audio/typing-data.mp3",
+    [BGM_PLAYLIST.DEFAULT]: "/assets/audio/typing-data.mp3",
+    [BGM_PLAYLIST.WORK]: "/assets/audio/typing-data.mp3",
+    [BGM_PLAYLIST.LOVE]: "/assets/audio/typing-data.mp3",
+    [BGM_PLAYLIST.HOUSING]: "/assets/audio/typing-data.mp3",
+    [BGM_PLAYLIST.HEALTH]: "/assets/audio/typing-data.mp3",
+    [BGM_PLAYLIST.MORAL]: "/assets/audio/typing-data.mp3",
+    [BGM_PLAYLIST.SUMMARY]: "/assets/audio/typing-data.mp3",
+    [BGM_PLAYLIST.ENDING_BAD]: "/assets/audio/typing-data.mp3",
+    [BGM_PLAYLIST.ENDING_SURVIVAL]: "/assets/audio/typing-data.mp3",
+    [BGM_PLAYLIST.ENDING_SUCCESS]: "/assets/audio/typing-data.mp3",
 };
 
 // Image Collection
@@ -62,14 +62,14 @@ const IMAGES = {
     BOSS: "/assets/images/boss.jpg", 
     SUBWAY: "/assets/images/subway.jpg", 
     APARTMENT: "/assets/images/apartment.jpg", 
-    STREET: "https://images.unsplash.com/photo-1605806616949-1e87b487bc2a?q=80&w=1200&auto=format&fit=crop", 
-    HOSPITAL: "https://images.unsplash.com/photo-1516549655169-df83a0833860?q=80&w=1200&auto=format&fit=crop", 
+    STREET: "/assets/images/office.jpg", 
+    HOSPITAL: "/assets/images/office.jpg", 
     CLUB: "/assets/images/club.jpg",
     SHOP: "/assets/images/shop.jpg", 
     SLUMS: "/assets/images/slums.jpg", 
-    SERVER: "https://images.unsplash.com/photo-1531297461136-82lw392398?q=80&w=1200&auto=format&fit=crop", 
+    SERVER: "/assets/images/slums.jpg", 
     HIGH_END: "/assets/images/highend.jpg", 
-    CROWD: "https://images.unsplash.com/photo-1504384308090-c54be3855091?q=80&w=1200&auto=format&fit=crop" 
+    CROWD: "/assets/images/slums.jpg" 
 };
 
 export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: StoryArchetype[] }> = {

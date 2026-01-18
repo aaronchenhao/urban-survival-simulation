@@ -40,7 +40,7 @@ const EndingScreen: React.FC<Props> = ({ gameState, onRestart }) => {
   return (
     <div className="flex flex-col h-full bg-zinc-950 p-6 items-center justify-center relative overflow-hidden">
       {/* Background noise */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-10 mix-blend-overlay pointer-events-none"></div>
       <div className="absolute inset-0 border-8 border-double border-zinc-800 pointer-events-none m-4"></div>
 
       {/* Report Card */}

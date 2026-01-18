@@ -209,7 +209,7 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
            )}
            {/* Heavy gradient at bottom to ensure text readability */}
            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/30"></div>
-           <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
+           <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20 mix-blend-overlay"></div>
       </div>
 
       {/* Damage Flash Overlay */}
