@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => {
       plugins: [react(), tailwindcss()],
       build: {
         target: 'es2015', // 更好的浏览器兼容性，支持微信浏览器
-        minify: 'terser',
+        minify: 'esbuild', // 使用 esbuild（Vite 默认，更快且无需额外依赖）
         cssCodeSplit: false, // 合并 CSS 文件，减少请求
         rollupOptions: {
           output: {
