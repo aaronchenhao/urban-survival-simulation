@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { GameConfig } from '../types';
 import { INITIAL_CASH, COSTS } from '../constants';
+import { getResourcePath } from '../utils/path';
 
 interface Props {
   onComplete: (config: GameConfig, initialCash: number) => void;
@@ -51,7 +52,7 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
   return (
     <div className="flex flex-col h-full w-full bg-black text-zinc-100 font-sans select-none overflow-y-auto custom-scrollbar pb-32 relative">
        {/* Background */}
-       <div className="fixed inset-0 pointer-events-none bg-[url('/noise.svg')] opacity-10"></div>
+       <div className="fixed inset-0 pointer-events-none opacity-10" style={{ backgroundImage: `url('${getResourcePath('/noise.svg')}')` }}></div>
        <div className="fixed inset-0 pointer-events-none bg-gradient-to-b from-black via-zinc-900/50 to-emerald-900/10"></div>
 
        <div className="relative z-10 p-6 max-w-lg mx-auto w-full space-y-8 animate-fade-in-up">

@@ -1,5 +1,6 @@
 
 import { EventCategory, GameConfig, DialogueLine } from './types';
+import { getResourcePath } from './utils/path';
 
 export interface StoryRequirements {
   rentType?: ('homeless' | 'cheap' | 'expensive')[];
@@ -32,44 +33,47 @@ export const BGM_PLAYLIST = {
     ENDING_SUCCESS: "No Longer Chasing"
 };
 
-// SFX Constants
+// SFX Constants - using getResourcePath for base URL support
+const getSFXPath = (path: string) => getResourcePath(path);
 export const SFX_SOURCES = {
-    TYPING: "/assets/audio/typing-data.mp3", 
-    TYPING_DATA: "/assets/audio/typing-data.mp3",
-    COMMS_IN: "/assets/audio/comms-in.mp3",
-    MESSAGE_NEXT: "/assets/audio/typing-data.mp3",
-    DAMAGE_IMPACT: "/assets/audio/typing-data.mp3"
+    TYPING: getSFXPath("/assets/audio/typing-data.mp3"), 
+    TYPING_DATA: getSFXPath("/assets/audio/typing-data.mp3"),
+    COMMS_IN: getSFXPath("/assets/audio/comms-in.mp3"),
+    MESSAGE_NEXT: getSFXPath("/assets/audio/typing-data.mp3"),
+    DAMAGE_IMPACT: getSFXPath("/assets/audio/typing-data.mp3")
 };
 
-// Audio Sources
+// Audio Sources - using getResourcePath for base URL support
+const getAudioPath = (path: string) => getResourcePath(path);
 export const AUDIO_SOURCES = {
-    [BGM_PLAYLIST.INTRO]: "/assets/audio/typing-data.mp3",
-    [BGM_PLAYLIST.DEFAULT]: "/assets/audio/typing-data.mp3",
-    [BGM_PLAYLIST.WORK]: "/assets/audio/typing-data.mp3",
-    [BGM_PLAYLIST.LOVE]: "/assets/audio/typing-data.mp3",
-    [BGM_PLAYLIST.HOUSING]: "/assets/audio/typing-data.mp3",
-    [BGM_PLAYLIST.HEALTH]: "/assets/audio/typing-data.mp3",
-    [BGM_PLAYLIST.MORAL]: "/assets/audio/typing-data.mp3",
-    [BGM_PLAYLIST.SUMMARY]: "/assets/audio/typing-data.mp3",
-    [BGM_PLAYLIST.ENDING_BAD]: "/assets/audio/typing-data.mp3",
-    [BGM_PLAYLIST.ENDING_SURVIVAL]: "/assets/audio/typing-data.mp3",
-    [BGM_PLAYLIST.ENDING_SUCCESS]: "/assets/audio/typing-data.mp3",
+    [BGM_PLAYLIST.INTRO]: getAudioPath("/assets/audio/typing-data.mp3"),
+    [BGM_PLAYLIST.DEFAULT]: getAudioPath("/assets/audio/typing-data.mp3"),
+    [BGM_PLAYLIST.WORK]: getAudioPath("/assets/audio/typing-data.mp3"),
+    [BGM_PLAYLIST.LOVE]: getAudioPath("/assets/audio/typing-data.mp3"),
+    [BGM_PLAYLIST.HOUSING]: getAudioPath("/assets/audio/typing-data.mp3"),
+    [BGM_PLAYLIST.HEALTH]: getAudioPath("/assets/audio/typing-data.mp3"),
+    [BGM_PLAYLIST.MORAL]: getAudioPath("/assets/audio/typing-data.mp3"),
+    [BGM_PLAYLIST.SUMMARY]: getAudioPath("/assets/audio/typing-data.mp3"),
+    [BGM_PLAYLIST.ENDING_BAD]: getAudioPath("/assets/audio/typing-data.mp3"),
+    [BGM_PLAYLIST.ENDING_SURVIVAL]: getAudioPath("/assets/audio/typing-data.mp3"),
+    [BGM_PLAYLIST.ENDING_SUCCESS]: getAudioPath("/assets/audio/typing-data.mp3"),
 };
 
-// Image Collection
+// Image Collection - using getResourcePath for base URL support
+const getImagePath = (path: string) => getResourcePath(path);
 const IMAGES = {
-    OFFICE: "/assets/images/office.jpg", 
-    BOSS: "/assets/images/boss.jpg", 
-    SUBWAY: "/assets/images/subway.jpg", 
-    APARTMENT: "/assets/images/apartment.jpg", 
-    STREET: "/assets/images/office.jpg", 
-    HOSPITAL: "/assets/images/office.jpg", 
-    CLUB: "/assets/images/club.jpg",
-    SHOP: "/assets/images/shop.jpg", 
-    SLUMS: "/assets/images/slums.jpg", 
-    SERVER: "/assets/images/slums.jpg", 
-    HIGH_END: "/assets/images/highend.jpg", 
-    CROWD: "/assets/images/slums.jpg" 
+    OFFICE: getImagePath("/assets/images/office.jpg"), 
+    BOSS: getImagePath("/assets/images/boss.jpg"), 
+    SUBWAY: getImagePath("/assets/images/subway.jpg"), 
+    APARTMENT: getImagePath("/assets/images/apartment.jpg"), 
+    STREET: getImagePath("/assets/images/office.jpg"), 
+    HOSPITAL: getImagePath("/assets/images/office.jpg"), 
+    CLUB: getImagePath("/assets/images/club.jpg"),
+    SHOP: getImagePath("/assets/images/shop.jpg"), 
+    SLUMS: getImagePath("/assets/images/slums.jpg"), 
+    SERVER: getImagePath("/assets/images/slums.jpg"), 
+    HIGH_END: getImagePath("/assets/images/highend.jpg"), 
+    CROWD: getImagePath("/assets/images/slums.jpg") 
 };
 
 export const STORY_DATABASE: Record<number, { core: StoryArchetype[], random: StoryArchetype[] }> = {

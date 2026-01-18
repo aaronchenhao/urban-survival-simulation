@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { GameEvent, GameState, GameOption } from '../types';
 import { STAGE_THEMES } from '../constants';
 import { SFX_SOURCES } from '../storyData';
+import { getResourcePath } from '../utils/path';
 import Typewriter from './Typewriter';
 
 interface Props {
@@ -209,7 +210,7 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
            )}
            {/* Heavy gradient at bottom to ensure text readability */}
            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/30"></div>
-           <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20 mix-blend-overlay"></div>
+           <div className="absolute inset-0 opacity-20 mix-blend-overlay" style={{ backgroundImage: `url('${getResourcePath('/noise.svg')}')` }}></div>
       </div>
 
       {/* Damage Flash Overlay */}
