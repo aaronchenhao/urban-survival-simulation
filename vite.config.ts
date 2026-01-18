@@ -12,6 +12,16 @@ export default defineConfig(({ mode }) => {
         host: '0.0.0.0',
       },
       plugins: [react(), tailwindcss()],
+      build: {
+        target: 'es2015', // 更好的浏览器兼容性，支持微信浏览器
+        minify: 'terser',
+        cssCodeSplit: false, // 合并 CSS 文件，减少请求
+        rollupOptions: {
+          output: {
+            manualChunks: undefined, // 单文件输出，减少加载复杂度
+          }
+        }
+      },
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
         'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
