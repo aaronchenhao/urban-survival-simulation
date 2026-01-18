@@ -142,7 +142,7 @@ const AudioManager: React.FC<Props> = ({ gameState }) => {
   }, [isMuted, volume]);
 
   return (
-    <div className="fixed top-10 right-2 md:top-12 md:right-4 z-50 pointer-events-auto">
+    <div className="fixed top-16 right-2 md:top-20 md:right-4 z-50 pointer-events-auto">
       <button 
         onClick={() => setIsMuted(!isMuted)}
         className="bg-black/80 backdrop-blur border border-zinc-700 text-cyan-400 p-1.5 md:p-2 rounded-full hover:bg-zinc-800 transition-colors opacity-50 hover:opacity-100"
