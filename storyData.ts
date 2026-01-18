@@ -34,7 +34,8 @@ export const BGM_PLAYLIST = {
 };
 
 // SFX Constants - using getResourcePath for base URL support
-const getSFXPath = (path: string) => getResourcePath(path);
+// Temporarily disabled: returns empty string to disable sound (code preserved for future use)
+const getSFXPath = (path: string) => ""; // getResourcePath(path);
 export const SFX_SOURCES = {
     TYPING: getSFXPath("/assets/audio/typing-data.mp3"), 
     TYPING_DATA: getSFXPath("/assets/audio/typing-data.mp3"),
@@ -44,7 +45,8 @@ export const SFX_SOURCES = {
 };
 
 // Audio Sources - using getResourcePath for base URL support
-const getAudioPath = (path: string) => getResourcePath(path);
+// Temporarily disabled: returns empty string to disable sound (code preserved for future use)
+const getAudioPath = (path: string) => ""; // getResourcePath(path);
 export const AUDIO_SOURCES = {
     [BGM_PLAYLIST.INTRO]: getAudioPath("/assets/audio/typing-data.mp3"),
     [BGM_PLAYLIST.DEFAULT]: getAudioPath("/assets/audio/typing-data.mp3"),

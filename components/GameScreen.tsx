@@ -239,11 +239,14 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
       <header className="fixed top-0 left-0 right-0 z-40 px-2 md:px-4 pt-1 md:pt-2 pb-1 md:pb-2 flex items-start justify-between bg-gradient-to-b from-black/95 via-black/90 to-transparent pointer-events-none" style={{ minHeight: 'auto' }}>
         <div className="flex flex-col flex-shrink-0">
              <div className="text-[9px] md:text-[10px] text-cyan-400 cyber-font border border-cyan-500/50 px-1 md:px-1.5 py-0.5 rounded bg-black/50 w-max mb-0.5 whitespace-nowrap">
-                STAGE {gameState.stage + 1} // {theme.title}
+                STAGE {gameState.stage + 1}
+             </div>
+             <div className="text-[9px] md:text-xs font-bold text-zinc-300 cyber-font tracking-wider opacity-80 max-w-[90px] md:max-w-[120px] leading-tight mt-0.5">
+                {theme.title}
              </div>
         </div>
         
-        <div className="flex space-x-0.5 md:space-x-1.5 items-center flex-shrink-0 flex-wrap justify-end gap-x-0.5 md:gap-x-1.5 pr-10 md:pr-0">
+        <div className="flex space-x-0.5 md:space-x-1.5 items-center flex-shrink-0 flex-wrap justify-end gap-x-0.5 md:gap-x-1.5">
             <CashDisplay cash={gameState.stats.cash} />
             <StatBadge label="HP" value={gameState.stats.health} colorClass="rose-500" />
             <StatBadge label="PSY" value={gameState.stats.mental} colorClass="cyan-400" />
