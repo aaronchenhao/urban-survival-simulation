@@ -13,12 +13,14 @@ export default defineConfig(({ mode }) => {
       },
       plugins: [react(), tailwindcss()],
       build: {
-        target: 'es2015', // 更好的浏览器兼容性，支持微信浏览器
+        target: ['es2015', 'chrome58', 'safari11'], // 更好的浏览器兼容性，支持微信浏览器
         minify: 'esbuild', // 使用 esbuild（Vite 默认，更快且无需额外依赖）
         cssCodeSplit: false, // 合并 CSS 文件，减少请求
+        polyfillModulePreload: true, // 为模块预加载添加 polyfill
         rollupOptions: {
           output: {
             manualChunks: undefined, // 单文件输出，减少加载复杂度
+            inlineDynamicImports: true, // 内联动态导入
           }
         }
       },
