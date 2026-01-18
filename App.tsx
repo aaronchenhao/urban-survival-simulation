@@ -347,72 +347,75 @@ const App: React.FC = () => {
 
   if (gameState.screen === 'intro') {
       return (
-          <div className="flex flex-col items-center justify-center h-screen bg-black text-white p-6 md:p-8 text-center relative overflow-hidden font-sans">
+          <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-4 md:p-8 text-center relative overflow-y-auto font-sans">
               <AudioManager gameState={gameState} />
               
               {/* Animated Scanlines + Matrix */}
               <div className="scanlines z-10"></div>
               <MatrixBackground />
               
-              {/* Hero Section */}
-              <div className="z-20 flex flex-col items-center mb-12 animate-fade-in-up">
-                  <div className="border border-cyan-500/50 bg-cyan-950/20 px-4 py-1 rounded-sm text-[10px] tracking-[0.4em] text-cyan-400 mb-6 animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.3)]">
-                      SYSTEM_READY // VER 4.2
-                  </div>
-                  <h1 className="text-5xl md:text-7xl font-bold tracking-tighter cyber-font text-white mb-2 glitch-effect relative drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" data-text="URBAN SURVIVAL">
-                      URBAN SURVIVAL
-                  </h1>
-                  <h2 className="text-2xl md:text-3xl text-cyan-500 cyber-font tracking-[0.2em] uppercase neon-text opacity-90">
-                      都市生存模拟
-                  </h2>
-              </div>
-              
-              {/* Lore/Context - Cleaned up visual hierarchy */}
-              <div className="relative z-20 max-w-2xl mx-auto text-center space-y-8 mb-20 px-6 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                  
-                  {/* Warning Box - Less "Christmassy", more "System Alert" */}
-                  <div className="inline-block border-l-2 border-rose-500 bg-gradient-to-r from-rose-950/40 to-transparent px-6 py-2">
-                      <span className="text-rose-400 font-bold tracking-widest text-sm md:text-base flex items-center gap-3">
-                          <span className="w-1.5 h-1.5 bg-rose-500 rounded-full animate-ping"></span>
-                          ALERT: CREDIT SCORE CRITICAL
-                      </span>
+              {/* Content Container with proper spacing for mobile */}
+              <div className="w-full max-w-4xl mx-auto flex flex-col items-center justify-center min-h-screen py-8 md:py-12">
+                  {/* Hero Section */}
+                  <div className="z-20 flex flex-col items-center mb-6 md:mb-12 animate-fade-in-up">
+                      <div className="border border-cyan-500/50 bg-cyan-950/20 px-4 py-1 rounded-sm text-[10px] tracking-[0.4em] text-cyan-400 mb-4 md:mb-6 animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.3)]">
+                          SYSTEM_READY // VER 4.2
+                      </div>
+                      <h1 className="text-4xl md:text-7xl font-bold tracking-tighter cyber-font text-white mb-2 glitch-effect relative drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" data-text="URBAN SURVIVAL">
+                          URBAN SURVIVAL
+                      </h1>
+                      <h2 className="text-xl md:text-3xl text-cyan-500 cyber-font tracking-[0.2em] uppercase neon-text opacity-90">
+                          都市生存模拟
+                      </h2>
                   </div>
                   
-                  <div className="space-y-4">
-                      <p className="text-lg md:text-2xl text-zinc-300 leading-relaxed font-light">
-                          在这座被数据吞噬的霓虹废墟里，<br className="hidden md:block"/>
-                          你不是公民，只是一个 <span className="text-cyan-100 font-bold border-b border-cyan-500/50 pb-1">待消耗的电池</span>。
-                      </p>
+                  {/* Lore/Context - Cleaned up visual hierarchy */}
+                  <div className="relative z-20 max-w-2xl mx-auto text-center space-y-4 md:space-y-8 mb-8 md:mb-12 px-4 md:px-6 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
                       
-                      <p className="text-base md:text-lg text-zinc-400 leading-relaxed max-w-xl mx-auto">
-                          房租、贷款、医疗费、消费陷阱……<br/>
-                          世界已被折叠，只为将你 <span className="text-rose-400 font-bold neon-text">永远囚禁在底层</span>。
-                      </p>
+                      {/* Warning Box - Less "Christmassy", more "System Alert" */}
+                      <div className="inline-block border-l-2 border-rose-500 bg-gradient-to-r from-rose-950/40 to-transparent px-4 md:px-6 py-2">
+                          <span className="text-rose-400 font-bold tracking-widest text-xs md:text-base flex items-center gap-2 md:gap-3">
+                              <span className="w-1.5 h-1.5 bg-rose-500 rounded-full animate-ping"></span>
+                              ALERT: CREDIT SCORE CRITICAL
+                          </span>
+                      </div>
+                      
+                      <div className="space-y-3 md:space-y-4">
+                          <p className="text-base md:text-2xl text-zinc-300 leading-relaxed font-light">
+                              在这座被数据吞噬的霓虹废墟里，<br className="hidden md:block"/>
+                              你不是公民，只是一个 <span className="text-cyan-100 font-bold border-b border-cyan-500/50 pb-1">待消耗的电池</span>。
+                          </p>
+                          
+                          <p className="text-sm md:text-lg text-zinc-400 leading-relaxed max-w-xl mx-auto">
+                              房租、贷款、医疗费、消费陷阱……<br/>
+                              世界已被折叠，只为将你 <span className="text-rose-400 font-bold neon-text">永远囚禁在底层</span>。
+                          </p>
+                      </div>
+
+                      <div className="pt-2 md:pt-4">
+                           <p className="text-base md:text-2xl text-zinc-200 flex flex-col md:flex-row items-center justify-center gap-2">
+                              哪怕只有 <span className="text-cyan-400 font-bold text-2xl md:text-5xl glitch-effect drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">1%</span> 的机会，
+                          </p>
+                          <p className="text-base md:text-2xl text-white font-bold mt-2">
+                              你敢撕开这虚幻的幕布吗？
+                          </p>
+                      </div>
                   </div>
 
-                  <div className="pt-4">
-                       <p className="text-lg md:text-2xl text-zinc-200 flex flex-col md:flex-row items-center justify-center gap-2">
-                          哪怕只有 <span className="text-cyan-400 font-bold text-3xl md:text-5xl glitch-effect drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">1%</span> 的机会，
-                      </p>
-                      <p className="text-lg md:text-2xl text-white font-bold mt-2">
-                          你敢撕开这虚幻的幕布吗？
+                  {/* Start Button Area - Fixed position on mobile, centered on desktop */}
+                  <div className="z-20 w-full max-w-xs flex flex-col items-center space-y-4 md:space-y-6 animate-fade-in-up pb-8 md:pb-0" style={{animationDelay: '0.4s'}}>
+                      <button 
+                          onClick={() => setGameState(prev => ({ ...prev, screen: 'allocation' }))}
+                          className="w-full bg-transparent hover:bg-cyan-500/10 text-cyan-400 font-bold text-lg md:text-xl py-4 md:py-5 transition-all duration-300 shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] tracking-[0.25em] border border-cyan-500 rounded-sm relative group overflow-hidden"
+                      >
+                          <span className="relative z-10 group-hover:text-white transition-colors">接受挑战</span>
+                          {/* Scanline passing through button */}
+                          <div className="absolute top-0 left-[-100%] w-[50%] h-full bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent skew-x-[-20deg] group-hover:animate-[shine_1s_ease-in-out_infinite]"></div>
+                      </button>
+                      <p className="text-[10px] text-zinc-500 font-mono text-center max-w-[240px] leading-tight opacity-60 px-2">
+                          *点击即代表您已签署《个人意识数据让渡协议》并放弃一切追索权。
                       </p>
                   </div>
-              </div>
-
-              {/* Start Button Area - Wireframe / Holographic Style */}
-              <div className="z-20 w-full max-w-xs flex flex-col items-center space-y-6 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-                  <button 
-                      onClick={() => setGameState(prev => ({ ...prev, screen: 'allocation' }))}
-                      className="w-full bg-transparent hover:bg-cyan-500/10 text-cyan-400 font-bold text-xl py-5 transition-all duration-300 shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] tracking-[0.25em] border border-cyan-500 rounded-sm relative group overflow-hidden"
-                  >
-                      <span className="relative z-10 group-hover:text-white transition-colors">接受挑战</span>
-                      {/* Scanline passing through button */}
-                      <div className="absolute top-0 left-[-100%] w-[50%] h-full bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent skew-x-[-20deg] group-hover:animate-[shine_1s_ease-in-out_infinite]"></div>
-                  </button>
-                  <p className="text-[10px] text-zinc-500 font-mono text-center max-w-[240px] leading-tight opacity-60">
-                      *点击即代表您已签署《个人意识数据让渡协议》并放弃一切追索权。
-                  </p>
               </div>
           </div>
       );
