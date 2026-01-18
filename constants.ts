@@ -28,12 +28,12 @@ export const THRESHOLDS = {
 };
 
 export const STAGE_THEMES: StageTheme[] = [
-  { title: "第一阶段：初入职场", description: "试用期的压力，办公室的潜规则，以及无休止的加班。" }, 
-  { title: "第二阶段：消费主义陷阱", description: "光鲜亮丽的城市生活诱惑着你，通过消费获得短暂的快乐是如此简单。" }, 
-  { title: "第三阶段：资本寒冬", description: "行业开始动荡，裁员的流言四起，你需要证明自己的不可替代性。" }, 
-  { title: "第四阶段：家庭与责任", description: "远方的父母，突如其来的变故，或者是一个组建家庭的承诺。" }, 
-  { title: "第五阶段：身心临界点", description: "长期透支的身体开始报警，你是选择停下休息还是冲刺最后的机会？" }, 
-  { title: "第六阶段：最终审判", description: "所有的选择都已标好价格，现在是支付账单的时候了。" }, 
+  { title: "初入职场", description: "试用期的压力，办公室的潜规则，以及无休止的加班。" }, 
+  { title: "消费主义陷阱", description: "光鲜亮丽的城市生活诱惑着你，通过消费获得短暂的快乐是如此简单。" }, 
+  { title: "资本寒冬", description: "行业开始动荡，裁员的流言四起，你需要证明自己的不可替代性。" }, 
+  { title: "家庭与责任", description: "远方的父母，突如其来的变故，或者是一个组建家庭的承诺。" }, 
+  { title: "身心临界点", description: "长期透支的身体开始报警，你是选择停下休息还是冲刺最后的机会？" }, 
+  { title: "最终审判", description: "所有的选择都已标好价格，现在是支付账单的时候了。" }, 
 ];
 
 export const SALARY_BASE_INITIAL = 8000; // Monthly net income start
