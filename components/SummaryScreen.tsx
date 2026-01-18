@@ -108,12 +108,12 @@ const SummaryScreen: React.FC<Props> = ({ gameState, onContinue, onAdjustAsset, 
         </div>
       </div>
     );
-  };
+  };    
 
   return (
     <div className="flex flex-col h-full bg-zinc-900 p-6 overflow-y-auto custom-scrollbar">
       <h1 className="text-3xl font-bold text-white mb-2 cyber-font border-l-4 border-cyan-500 pl-4">
-        STAGE REPORT <span className="text-cyan-400 text-lg">//{gameState.stage + 1}</span>
+        STAGE REPORT {gameState.stage + 1}
       </h1>
       
       {/* Wealth Goal Tracker */}
