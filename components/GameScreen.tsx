@@ -35,9 +35,9 @@ const StatBadge = ({ label, value, colorClass }: { label: string, value: number,
     }, [value, prevValue]);
 
     return (
-        <div className={`flex flex-col items-center bg-black/60 backdrop-blur-sm border-b-2 border-${colorClass} p-1 w-12 md:w-16 relative transition-all duration-300 ${diff && diff < 0 ? 'animate-shake bg-red-900/40' : ''}`}>
-            <span className={`text-[8px] md:text-[10px] text-${colorClass} uppercase tracking-wider`}>{label}</span>
-            <span className={`text-sm md:text-lg font-bold font-mono text-white`}>{Math.floor(value)}</span>
+        <div className={`flex flex-col items-center bg-black/60 backdrop-blur-sm border-b-2 border-${colorClass} p-0.5 md:p-1 w-10 md:w-16 relative transition-all duration-300 ${diff && diff < 0 ? 'animate-shake bg-red-900/40' : ''}`}>
+            <span className={`text-[7px] md:text-[10px] text-${colorClass} uppercase tracking-wider leading-tight`}>{label}</span>
+            <span className={`text-xs md:text-lg font-bold font-mono text-white leading-tight`}>{Math.floor(value)}</span>
             
             {diff !== null && diff !== 0 && (
                 <div className={`absolute -bottom-5 left-0 right-0 text-center font-bold font-mono text-xs animate-bounce ${diff > 0 ? 'text-emerald-400' : 'text-red-500'}`}>
@@ -61,8 +61,8 @@ const CashDisplay = ({ cash }: { cash: number }) => {
     }, [cash, prevCash]);
 
     return (
-        <div className="relative mr-3">
-            <div className={`font-mono text-base md:text-xl font-bold ${cash < 0 ? 'text-red-500 neon-text' : 'text-emerald-400 neon-text'}`}>
+        <div className="relative mr-1 md:mr-3">
+            <div className={`font-mono text-xs md:text-xl font-bold leading-tight ${cash < 0 ? 'text-red-500 neon-text' : 'text-emerald-400 neon-text'}`}>
                 ¥{cash.toLocaleString()}
             </div>
             {diff !== null && diff !== 0 && (
@@ -124,7 +124,10 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
   // Reset state when dialogue line changes
   useEffect(() => {
       setInstantText(false);
-      setIsTypingDone(false);
+      // Only reset isTypingDone if dialogue index actually changes to a new dialogue
+      if (dialogueIndex >= 0) {
+          setIsTypingDone(false);
+      }
   }, [dialogueIndex]);
 
   const handleScreenTap = () => {
@@ -133,6 +136,10 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
       // 1. If typing is NOT done, force it to finish instantly (SKIP)
       if (!isTypingDone) {
           setInstantText(true);
+          // Force completion after a brief delay to ensure state updates
+          setTimeout(() => {
+              setIsTypingDone(true);
+          }, 100);
           return;
       }
 
@@ -142,10 +149,12 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
           // If we are currently showing description (-1), move to first dialogue (0)
           if (dialogueIndex === -1) {
               setDialogueIndex(0);
+              setIsTypingDone(false); // Reset for dialogue typing
           } 
           // If we are in dialogue sequence
           else if (dialogueIndex >= 0 && dialogueIndex < currentEvent.dialogue.length - 1) {
               setDialogueIndex(prev => prev + 1);
+              setIsTypingDone(false); // Reset for next dialogue typing
           }
           // End of dialogue
           else {
@@ -194,7 +203,16 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
     : null;
 
   return (
-    <div className="h-full w-full bg-black text-zinc-100 overflow-hidden relative font-sans select-none" onClick={handleScreenTap}>
+    <div 
+      className="h-full w-full bg-black text-zinc-100 overflow-hidden relative font-sans select-none" 
+      onClick={handleScreenTap}
+      onTouchEnd={(e) => {
+        // Prevent double-tap zoom on mobile
+        e.preventDefault();
+        handleScreenTap();
+      }}
+      style={{ touchAction: 'manipulation' }}
+    >
       <div className="scanlines"></div>
       
       {/* 0. BACKGROUND LAYER */}
@@ -218,17 +236,17 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
       <div className={`absolute inset-0 z-50 pointer-events-none transition-opacity duration-100 ${damageFlash === 'mental' ? 'bg-white/30 mix-blend-difference opacity-100' : 'opacity-0'}`}></div>
 
       {/* 1. HUD LAYER (Fixed Top) */}
-      <header className="absolute top-0 left-0 right-0 z-40 px-4 pt-4 pb-12 flex items-start justify-between bg-gradient-to-b from-black/90 to-transparent pointer-events-none">
-        <div className="flex flex-col">
-             <div className="text-[10px] text-emerald-500 cyber-font border border-emerald-900/50 px-1.5 py-0.5 rounded bg-black/50 w-max mb-1">
+      <header className="absolute top-0 left-0 right-0 z-40 px-2 md:px-4 pt-2 md:pt-4 pb-8 md:pb-12 flex items-start justify-between bg-gradient-to-b from-black/90 to-transparent pointer-events-none">
+        <div className="flex flex-col flex-shrink-0">
+             <div className="text-[9px] md:text-[10px] text-emerald-500 cyber-font border border-emerald-900/50 px-1 md:px-1.5 py-0.5 rounded bg-black/50 w-max mb-0.5 md:mb-1">
                 STAGE {gameState.stage}
              </div>
-             <h1 className="text-xs font-bold text-zinc-300 cyber-font tracking-wider opacity-80 max-w-[120px] leading-tight">
+             <h1 className="text-[10px] md:text-xs font-bold text-zinc-300 cyber-font tracking-wider opacity-80 max-w-[100px] md:max-w-[120px] leading-tight">
                 {theme.title}
              </h1>
         </div>
         
-        <div className="flex space-x-1.5 items-center">
+        <div className="flex space-x-0.5 md:space-x-1.5 items-center flex-shrink-0 flex-wrap justify-end gap-x-0.5 md:gap-x-1.5">
             <CashDisplay cash={gameState.stats.cash} />
             <StatBadge label="HP" value={gameState.stats.health} colorClass="rose-500" />
             <StatBadge label="PSY" value={gameState.stats.mental} colorClass="cyan-400" />
@@ -274,7 +292,19 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
             {/* STATE: Dialogue Active */}
             {currentDialogueLine && !showOptions && (
                  <div className="animate-fade-in-up w-full">
-                     <div className="bg-zinc-900/95 backdrop-blur-xl border border-zinc-600 rounded-lg p-5 relative shadow-[0_0_30px_rgba(0,0,0,0.8)] cursor-pointer hover:border-zinc-500 transition-colors mt-2">
+                     <div 
+                        className="bg-zinc-900/95 backdrop-blur-xl border border-zinc-600 rounded-lg p-5 relative shadow-[0_0_30px_rgba(0,0,0,0.8)] cursor-pointer hover:border-zinc-500 active:border-zinc-400 transition-colors mt-2"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            handleScreenTap();
+                        }}
+                        onTouchEnd={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            handleScreenTap();
+                        }}
+                        style={{ touchAction: 'manipulation' }}
+                     >
                         {/* Speaker Tag */}
                         <div className="absolute -top-3 left-4 bg-emerald-800 text-white text-xs font-bold px-3 py-1 rounded-sm border border-emerald-500 shadow-lg uppercase tracking-wider">
                             {currentDialogueLine.speaker}
