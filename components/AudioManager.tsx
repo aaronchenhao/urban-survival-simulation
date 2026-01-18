@@ -9,7 +9,7 @@ interface Props {
 const AudioManager: React.FC<Props> = ({ gameState }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [currentTrack, setCurrentTrack] = useState<string | null>(null);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true); // Default muted
   const [volume, setVolume] = useState(0.25); // Max volume comfortably below text reading level
 
   // Decide which track should play based on GameState
@@ -142,10 +142,11 @@ const AudioManager: React.FC<Props> = ({ gameState }) => {
   }, [isMuted, volume]);
 
   return (
-    <div className="fixed top-4 right-4 z-50">
+    <div className="fixed top-3 right-2 md:top-4 md:right-4 z-50 pointer-events-auto">
       <button 
         onClick={() => setIsMuted(!isMuted)}
-        className="bg-black/80 backdrop-blur border border-zinc-700 text-emerald-500 p-2 rounded-full hover:bg-zinc-800 transition-colors opacity-50 hover:opacity-100"
+        className="bg-black/80 backdrop-blur border border-zinc-700 text-cyan-400 p-1.5 md:p-2 rounded-full hover:bg-zinc-800 transition-colors opacity-50 hover:opacity-100"
+        style={{ fontSize: '14px' }}
       >
         {isMuted ? '🔇' : '🔊'}
       </button>

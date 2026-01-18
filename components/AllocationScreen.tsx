@@ -53,14 +53,14 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
     <div className="flex flex-col h-full w-full bg-black text-zinc-100 font-sans select-none overflow-y-auto custom-scrollbar pb-72 md:pb-32 relative">
        {/* Background */}
        <div className="fixed inset-0 pointer-events-none opacity-10" style={{ backgroundImage: `url('${getResourcePath('/noise.svg')}')` }}></div>
-       <div className="fixed inset-0 pointer-events-none bg-gradient-to-b from-black via-zinc-900/50 to-emerald-900/10"></div>
+       <div className="fixed inset-0 pointer-events-none bg-gradient-to-b from-black via-zinc-900/50 to-cyan-900/10"></div>
 
        <div className="relative z-10 p-4 md:p-6 max-w-lg mx-auto w-full space-y-6 md:space-y-8 animate-fade-in-up">
           
           {/* Header */}
-          <header className="border-b border-emerald-500/30 pb-4">
+          <header className="border-b border-cyan-500/30 pb-4">
             <div className="flex items-center justify-between mb-2">
-                <span className="text-[10px] text-emerald-500 border border-emerald-500 px-2 py-0.5 rounded uppercase tracking-widest">Setup Wizard v9.2</span>
+                <span className="text-[10px] text-cyan-400 border border-cyan-500 px-2 py-0.5 rounded uppercase tracking-widest">Setup Wizard v9.2</span>
                 <span className="text-[10px] text-zinc-500 font-mono">ID: 8921-X</span>
             </div>
             <h1 className="text-3xl font-bold text-white cyber-font glitch-effect mb-1">INITIALIZE_ASSETS</h1>
@@ -71,7 +71,7 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
           <div className="bg-zinc-900/80 border border-zinc-700 p-4 rounded-lg flex justify-between items-center shadow-[0_0_15px_rgba(0,0,0,0.5)]">
              <div>
                 <div className="text-[10px] text-zinc-500 uppercase tracking-wider">Available Credits</div>
-                <div className={`font-mono text-2xl font-bold ${remainingCash < 0 ? 'text-red-500' : 'text-emerald-400'}`}>
+                <div className={`font-mono text-2xl font-bold ${remainingCash < 0 ? 'text-red-500' : 'text-cyan-400'}`}>
                   {formatMoney(remainingCash)}
                 </div>
              </div>
@@ -83,8 +83,8 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
 
           {/* 1. Housing */}
           <section className="space-y-3">
-             <h2 className="text-sm font-bold text-emerald-500 uppercase tracking-widest flex items-center">
-                <span className="w-1.5 h-1.5 bg-emerald-500 mr-2"></span>
+             <h2 className="text-sm font-bold text-cyan-400 uppercase tracking-widest flex items-center">
+                <span className="w-1.5 h-1.5 bg-cyan-500 mr-2"></span>
                 Habitation Protocol // 居住模块
              </h2>
              <div className="grid grid-cols-2 gap-3">
@@ -92,13 +92,13 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
                     onClick={() => setRentType('cheap')}
                     className={`relative p-3 rounded border transition-all ${
                         rentType === 'cheap' 
-                        ? 'bg-emerald-900/20 border-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.2)]' 
+                        ? 'bg-cyan-900/20 border-cyan-500 shadow-[0_0_10px_rgba(34,211,238,0.2)]' 
                         : 'bg-zinc-900 border-zinc-800 opacity-60 hover:opacity-100'
                     }`}
                 >
                     <div className="text-left">
                         <div className="font-bold text-sm text-zinc-100">胶囊笼屋 (D区)</div>
-                        <div className="text-[10px] text-emerald-400 font-mono mt-1">¥{COSTS.RENT_CHEAP}/mo</div>
+                        <div className="text-[10px] text-cyan-400 font-mono mt-1">¥{COSTS.RENT_CHEAP}/mo</div>
                         <div className="text-[10px] text-red-400 mt-2 leading-tight">
                             ⚠️ 混合供氧<br/>⚠️ 辐射超标<br/>📉 SAN值损耗
                         </div>
@@ -108,13 +108,13 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
                     onClick={() => setRentType('expensive')}
                     className={`relative p-3 rounded border transition-all ${
                         rentType === 'expensive' 
-                        ? 'bg-emerald-900/20 border-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.2)]' 
+                        ? 'bg-cyan-900/20 border-cyan-500 shadow-[0_0_10px_rgba(34,211,238,0.2)]' 
                         : 'bg-zinc-900 border-zinc-800 opacity-60 hover:opacity-100'
                     }`}
                 >
                     <div className="text-left">
                         <div className="font-bold text-sm text-zinc-100">智能公寓 (B区)</div>
-                        <div className="text-[10px] text-emerald-400 font-mono mt-1">¥{COSTS.RENT_EXPENSIVE}/mo</div>
+                        <div className="text-[10px] text-cyan-400 font-mono mt-1">¥{COSTS.RENT_EXPENSIVE}/mo</div>
                         <div className="text-[10px] text-zinc-400 mt-2 leading-tight">
                             ✅ 独立滤镜<br/>✅ 噪音屏蔽<br/>📈 精神恢复
                         </div>
@@ -125,8 +125,8 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
 
           {/* 2. Mobility */}
           <section className="space-y-3">
-             <h2 className="text-sm font-bold text-emerald-500 uppercase tracking-widest flex items-center">
-                <span className="w-1.5 h-1.5 bg-emerald-500 mr-2"></span>
+             <h2 className="text-sm font-bold text-cyan-400 uppercase tracking-widest flex items-center">
+                <span className="w-1.5 h-1.5 bg-cyan-500 mr-2"></span>
                 Mobility Solution // 载具模块
              </h2>
              <div className="space-y-2">
@@ -134,21 +134,21 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
                  <button
                     onClick={() => setCarType('none')}
                     className={`w-full p-3 rounded border flex justify-between items-center transition-all ${
-                        carType === 'none' ? 'bg-emerald-900/20 border-emerald-500' : 'bg-zinc-900 border-zinc-800 opacity-70'
+                        carType === 'none' ? 'bg-cyan-900/20 border-cyan-500' : 'bg-zinc-900 border-zinc-800 opacity-70'
                     }`}
                  >
                     <div className="text-left">
                         <div className="text-sm font-bold">公用磁悬浮 (Public Transit)</div>
                         <div className="text-[10px] text-zinc-500">拥挤，可能遭遇扒手</div>
                     </div>
-                    <span className="font-mono text-emerald-400 text-sm">¥0</span>
+                    <span className="font-mono text-cyan-400 text-sm">¥0</span>
                  </button>
 
                  {/* Gas Car -> Retro Combustion */}
                  <button
                     onClick={() => setCarType('gas')}
                     className={`w-full p-3 rounded border flex justify-between items-center transition-all ${
-                        carType === 'gas' ? 'bg-emerald-900/20 border-emerald-500' : 'bg-zinc-900 border-zinc-800 opacity-70'
+                        carType === 'gas' ? 'bg-cyan-900/20 border-cyan-500' : 'bg-zinc-900 border-zinc-800 opacity-70'
                     }`}
                  >
                     <div className="text-left">
@@ -162,12 +162,12 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
                  <button
                     onClick={() => setCarType('electric')}
                     className={`w-full p-3 rounded border flex justify-between items-center transition-all ${
-                        carType === 'electric' ? 'bg-emerald-900/20 border-emerald-500' : 'bg-zinc-900 border-zinc-800 opacity-70'
+                        carType === 'electric' ? 'bg-cyan-900/20 border-cyan-500' : 'bg-zinc-900 border-zinc-800 opacity-70'
                     }`}
                  >
                     <div className="text-left">
                         <div className="text-sm font-bold">智能浮空舱 (Smart Pod)</div>
-                        <div className="text-[10px] text-emerald-400">自动驾驶，极低维护</div>
+                        <div className="text-[10px] text-cyan-400">自动驾驶，极低维护</div>
                     </div>
                     <span className="font-mono text-red-400 text-sm">-¥{COSTS.CAR_ELEC_PRICE.toLocaleString()}</span>
                  </button>
@@ -176,8 +176,8 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
 
           {/* 3. Assets */}
           <section className="space-y-3 md:space-y-4">
-             <h2 className="text-sm font-bold text-emerald-500 uppercase tracking-widest flex items-center">
-                <span className="w-1.5 h-1.5 bg-emerald-500 mr-2"></span>
+             <h2 className="text-sm font-bold text-cyan-400 uppercase tracking-widest flex items-center">
+                <span className="w-1.5 h-1.5 bg-cyan-500 mr-2"></span>
                 Capital Allocation // 资产配置
              </h2>
              
@@ -185,12 +185,12 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
              <div className="bg-zinc-900/50 p-3 rounded border border-zinc-800">
                 <div className="flex justify-between mb-2">
                     <span className="text-xs text-zinc-300">巨企债券 (低风险)</span>
-                    <span className="text-xs font-mono text-emerald-400">{formatMoney(deposit)}</span>
+                    <span className="text-xs font-mono text-cyan-400">{formatMoney(deposit)}</span>
                 </div>
                 <input
                     type="range" min="0" max="200000" step="10000"
                     value={deposit} onChange={(e) => setDeposit(Number(e.target.value))}
-                    className="w-full h-1 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                    className="w-full h-1 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-cyan-500"
                 />
              </div>
 
@@ -198,12 +198,12 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
              <div className="bg-zinc-900/50 p-3 rounded border border-zinc-800">
                 <div className="flex justify-between mb-2">
                     <span className="text-xs text-zinc-300">AI量化基金 (中风险)</span>
-                    <span className="text-xs font-mono text-emerald-400">{formatMoney(funds)}</span>
+                    <span className="text-xs font-mono text-cyan-400">{formatMoney(funds)}</span>
                 </div>
                 <input
                     type="range" min="0" max="200000" step="10000"
                     value={funds} onChange={(e) => setFunds(Number(e.target.value))}
-                    className="w-full h-1 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                    className="w-full h-1 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-cyan-500"
                 />
              </div>
 
@@ -211,12 +211,12 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
              <div className="bg-zinc-900/50 p-3 rounded border border-zinc-800">
                 <div className="flex justify-between mb-2">
                     <span className="text-xs text-zinc-300">暗网期货 (高风险)</span>
-                    <span className="text-xs font-mono text-emerald-400">{formatMoney(stocks)}</span>
+                    <span className="text-xs font-mono text-cyan-400">{formatMoney(stocks)}</span>
                 </div>
                 <input
                     type="range" min="0" max="200000" step="10000"
                     value={stocks} onChange={(e) => setStocks(Number(e.target.value))}
-                    className="w-full h-1 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                    className="w-full h-1 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-cyan-500"
                 />
              </div>
 
@@ -224,13 +224,13 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
              <button
                 onClick={() => setInsurance(!insurance)}
                 className={`w-full p-3 rounded border flex justify-between items-center transition-all mb-12 md:mb-4 ${
-                    insurance ? 'bg-emerald-900/20 border-emerald-500' : 'bg-zinc-900 border-zinc-800'
+                    insurance ? 'bg-cyan-900/20 border-cyan-500' : 'bg-zinc-900 border-zinc-800'
                 }`}
              >
                 <div className="text-left flex-1 min-w-0">
                     <div className="text-sm font-bold flex items-center gap-2 flex-wrap">
                         <span>🛡️ 生物保险 (Bio-Secure)</span>
-                        {insurance && <span className="text-[10px] bg-emerald-500 text-black px-1 rounded">ACTIVE</span>}
+                        {insurance && <span className="text-[10px] bg-cyan-500 text-black px-1 rounded">ACTIVE</span>}
                     </div>
                     <div className="text-[10px] text-zinc-500 mt-1">抵御重大义体故障与急救费用</div>
                 </div>
@@ -250,7 +250,7 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
                 disabled={!isValid}
                 className={`w-full max-w-lg py-4 relative overflow-hidden group transition-all clip-path-polygon ${
                     isValid 
-                    ? 'bg-emerald-600 hover:bg-emerald-500 text-black' 
+                    ? 'bg-cyan-600 hover:bg-cyan-500 text-black' 
                     : 'bg-zinc-800 text-zinc-500 cursor-not-allowed'
                 }`}
                 >

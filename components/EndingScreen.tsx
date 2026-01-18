@@ -31,7 +31,7 @@ const EndingScreen: React.FC<Props> = ({ gameState, onRestart }) => {
     case 'success':
       title = "CLASS ASCENSION";
       stamp = "ELITE";
-      color = "text-emerald-400";
+      color = "text-cyan-400";
       status = "PLATINUM MEMBER";
       break;
     default:
@@ -118,7 +118,7 @@ const EndingScreen: React.FC<Props> = ({ gameState, onRestart }) => {
             </div>
             <button
                 onClick={onRestart}
-                className="bg-emerald-800 hover:bg-emerald-700 text-emerald-100 px-6 py-2 text-xs font-bold uppercase tracking-wider rounded-sm transition-colors border border-emerald-600"
+                className="bg-cyan-800 hover:bg-cyan-700 text-cyan-100 px-6 py-2 text-xs font-bold uppercase tracking-wider rounded-sm transition-colors border border-cyan-600"
             >
                 Re-Initialize
             </button>

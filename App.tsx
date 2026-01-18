@@ -29,7 +29,7 @@ const MatrixBackground = () => {
     return (
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 bg-black">
             {/* The Code Stream - Faster (25s), Brighter, Clearer */}
-            <div className="absolute inset-0 animate-[slideUp_25s_linear_infinite] font-mono text-emerald-500/50 text-lg md:text-2xl leading-relaxed whitespace-pre-wrap break-all p-4 select-none z-0 filter blur-[0.3px]">
+            <div className="absolute inset-0 animate-[slideUp_25s_linear_infinite] font-mono text-cyan-500/50 text-lg md:text-2xl leading-relaxed whitespace-pre-wrap break-all p-4 select-none z-0 filter blur-[0.3px]">
                 {codeLines}
                 {codeLines} {/* Repeat for looping effect */}
             </div>

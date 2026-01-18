@@ -75,7 +75,7 @@ const Typewriter: React.FC<Props> = ({ text, speed = 30, onComplete, className =
   return (
     <div className={className}>
       {displayedText}
-      {!isFinished && <span className="animate-pulse text-emerald-500 font-bold">_</span>}
+      {!isFinished && <span className="animate-pulse text-cyan-400 font-bold">_</span>}
     </div>
   );
 };

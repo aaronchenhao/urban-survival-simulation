@@ -40,7 +40,7 @@ const StatBadge = ({ label, value, colorClass }: { label: string, value: number,
             <span className={`text-[10px] md:text-lg font-bold font-mono text-white leading-tight`}>{Math.floor(value)}</span>
             
             {diff !== null && diff !== 0 && (
-                <div className={`absolute -bottom-5 left-0 right-0 text-center font-bold font-mono text-xs animate-bounce ${diff > 0 ? 'text-emerald-400' : 'text-red-500'}`}>
+                <div className={`absolute -bottom-5 left-0 right-0 text-center font-bold font-mono text-xs animate-bounce ${diff > 0 ? 'text-cyan-400' : 'text-red-500'}`}>
                     {diff > 0 ? '+' : ''}{Math.floor(diff)}
                 </div>
             )}
@@ -62,11 +62,11 @@ const CashDisplay = ({ cash }: { cash: number }) => {
 
     return (
         <div className="relative mr-0.5 md:mr-3">
-            <div className={`font-mono text-[10px] md:text-xl font-bold leading-tight ${cash < 0 ? 'text-red-500 neon-text' : 'text-emerald-400 neon-text'}`}>
+            <div className={`font-mono text-[10px] md:text-xl font-bold leading-tight ${cash < 0 ? 'text-red-500 neon-text' : 'text-cyan-400 neon-text'}`}>
                 ¥{cash.toLocaleString()}
             </div>
             {diff !== null && diff !== 0 && (
-                <div className={`absolute top-full right-0 text-xs font-bold font-mono animate-bounce ${diff > 0 ? 'text-emerald-300' : 'text-red-400'}`}>
+                <div className={`absolute top-full right-0 text-xs font-bold font-mono animate-bounce ${diff > 0 ? 'text-cyan-300' : 'text-red-400'}`}>
                     {diff > 0 ? '+' : ''}{diff.toLocaleString()}
                 </div>
             )}
@@ -177,14 +177,14 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center h-screen bg-black text-emerald-500 p-8 text-center space-y-6">
+      <div className="flex flex-col items-center justify-center h-screen bg-black text-cyan-400 p-8 text-center space-y-6">
         <div className="relative w-24 h-24">
-            <div className="absolute inset-0 border-4 border-emerald-500/30 rounded-full animate-ping"></div>
-            <div className="absolute inset-2 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin"></div>
+            <div className="absolute inset-0 border-4 border-cyan-500/30 rounded-full animate-ping"></div>
+            <div className="absolute inset-2 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
         <div>
             <h2 className="text-2xl font-bold cyber-font tracking-widest animate-pulse">LOADING SIMULATION</h2>
-            <p className="text-sm text-emerald-800 mt-2 font-mono">Generating Scenarios...</p>
+            <p className="text-sm text-cyan-800 mt-2 font-mono">Generating Scenarios...</p>
         </div>
       </div>
     );
@@ -238,15 +238,12 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
       {/* 1. HUD LAYER (Fixed Top) */}
       <header className="fixed top-0 left-0 right-0 z-40 px-2 md:px-4 pt-1 md:pt-2 pb-1 md:pb-2 flex items-start justify-between bg-gradient-to-b from-black/95 via-black/90 to-transparent pointer-events-none" style={{ minHeight: 'auto' }}>
         <div className="flex flex-col flex-shrink-0">
-             <div className="text-[9px] md:text-[10px] text-emerald-500 cyber-font border border-emerald-900/50 px-1 md:px-1.5 py-0.5 rounded bg-black/50 w-max mb-0.5">
-                STAGE {gameState.stage}
+             <div className="text-[9px] md:text-[10px] text-cyan-400 cyber-font border border-cyan-500/50 px-1 md:px-1.5 py-0.5 rounded bg-black/50 w-max mb-0.5 whitespace-nowrap">
+                STAGE {gameState.stage + 1} // {theme.title}
              </div>
-             <h1 className="text-[9px] md:text-xs font-bold text-zinc-300 cyber-font tracking-wider opacity-80 max-w-[90px] md:max-w-[120px] leading-tight">
-                {theme.title}
-             </h1>
         </div>
         
-        <div className="flex space-x-0.5 md:space-x-1.5 items-center flex-shrink-0 flex-wrap justify-end gap-x-0.5 md:gap-x-1.5">
+        <div className="flex space-x-0.5 md:space-x-1.5 items-center flex-shrink-0 flex-wrap justify-end gap-x-0.5 md:gap-x-1.5 pr-10 md:pr-0">
             <CashDisplay cash={gameState.stats.cash} />
             <StatBadge label="HP" value={gameState.stats.health} colorClass="rose-500" />
             <StatBadge label="PSY" value={gameState.stats.mental} colorClass="cyan-400" />
@@ -260,7 +257,7 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
           {/* A. Narrative Description (Top/Middle) */}
           <div className="flex-1 overflow-y-auto custom-scrollbar mb-4 relative">
              <div className="animate-fade-in-up">
-                <span className={`inline-block text-[10px] px-2 py-[2px] mb-2 border ${currentEvent.type === 'core' ? 'border-emerald-500 text-emerald-500' : 'border-pink-500 text-pink-500'} tracking-widest uppercase bg-black/60 backdrop-blur-md rounded-sm`}>
+                <span className={`inline-block text-[10px] px-2 py-[2px] mb-2 border ${currentEvent.type === 'core' ? 'border-cyan-500 text-cyan-400' : 'border-rose-500 text-rose-400'} tracking-widest uppercase bg-black/60 backdrop-blur-md rounded-sm`}>
                     {currentEvent.type === 'core' ? 'Main Sequence' : 'Random Encounter'}
                 </span>
                 <h2 className="text-2xl font-bold text-white mb-4 cyber-font leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
@@ -268,7 +265,7 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
                 </h2>
                 
                 <div 
-                    className={`text-zinc-100 text-base leading-relaxed font-light p-4 bg-black/40 backdrop-blur-md border-l-2 border-emerald-500/50 rounded-r-lg shadow-lg min-h-[100px] transition-all duration-300 ${dialogueIndex !== -1 ? 'opacity-50 scale-[0.98]' : 'hover:bg-black/50'}`}
+                    className={`text-zinc-100 text-base leading-relaxed font-light p-4 bg-black/40 backdrop-blur-md border-l-2 border-cyan-500/50 rounded-r-lg shadow-lg min-h-[100px] transition-all duration-300 ${dialogueIndex !== -1 ? 'opacity-50 scale-[0.98]' : 'hover:bg-black/50'}`}
                 >
                     <Typewriter 
                         text={currentEvent.description} 
@@ -280,7 +277,7 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
                 </div>
                 {dialogueIndex === -1 && !showOptions && isTypingDone && (
                      <div className="text-right mt-2">
-                        <span className="text-[10px] text-emerald-500 animate-bounce cursor-pointer">▼ CLICK TO CONTINUE</span>
+                        <span className="text-[10px] text-cyan-400 animate-bounce cursor-pointer">▼ CLICK TO CONTINUE</span>
                      </div>
                 )}
              </div>
@@ -306,7 +303,7 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
                         style={{ touchAction: 'manipulation' }}
                      >
                         {/* Speaker Tag */}
-                        <div className="absolute -top-3 left-4 bg-emerald-800 text-white text-xs font-bold px-3 py-1 rounded-sm border border-emerald-500 shadow-lg uppercase tracking-wider">
+                        <div className="absolute -top-3 left-4 bg-cyan-900 text-white text-xs font-bold px-3 py-1 rounded-sm border border-cyan-500 shadow-lg uppercase tracking-wider">
                             {currentDialogueLine.speaker}
                         </div>
                         
@@ -321,7 +318,7 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
                         </div>
                         
                         <div className="mt-3 flex justify-end min-h-[16px]">
-                             {isTypingDone && <span className="text-[10px] text-emerald-500 animate-pulse">▼ CLICK TO NEXT</span>}
+                             {isTypingDone && <span className="text-[10px] text-cyan-400 animate-pulse">▼ CLICK TO NEXT</span>}
                         </div>
                      </div>
                  </div>
@@ -331,7 +328,7 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
             {showOptions && (
                  <div className="space-y-3 animate-fade-in-up w-full">
                      <div className="text-center mb-2">
-                        <span className="text-[10px] text-emerald-500/70 border-b border-emerald-500/30 pb-1 uppercase tracking-[0.2em]">Awaiting Input</span>
+                        <span className="text-[10px] text-cyan-400/70 border-b border-cyan-500/30 pb-1 uppercase tracking-[0.2em]">Awaiting Input</span>
                      </div>
                      {currentEvent.options.map((option, idx) => (
                         <button
@@ -346,19 +343,19 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
                                 e.stopPropagation();
                                 onOptionSelected(option);
                             }}
-                            className="w-full relative group bg-zinc-900/90 backdrop-blur-md border border-zinc-600 active:border-emerald-400 active:bg-zinc-800 p-4 text-left rounded-lg transition-all shadow-lg active:scale-[0.98]"
+                            className="w-full relative group bg-zinc-900/90 backdrop-blur-md border border-zinc-600 active:border-cyan-400 active:bg-zinc-800 p-4 text-left rounded-lg transition-all shadow-lg active:scale-[0.98]"
                             style={{ touchAction: 'manipulation' }}
                         >
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <div className="font-bold text-white text-base mb-1 cyber-font group-active:text-emerald-400">
+                                    <div className="font-bold text-white text-base mb-1 cyber-font group-active:text-cyan-400">
                                         {option.label}
                                     </div>
                                     <div className="text-[10px] text-zinc-400 font-mono">
                                         {idx === 0 ? ">> OPTION_ALPHA" : ">> OPTION_BETA"}
                                     </div>
                                 </div>
-                                <div className="text-zinc-600 group-active:text-emerald-500 text-xl">
+                                <div className="text-zinc-600 group-active:text-cyan-400 text-xl">
                                     ›
                                 </div>
                             </div>
