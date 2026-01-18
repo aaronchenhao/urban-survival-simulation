@@ -35,9 +35,9 @@ const StatBadge = ({ label, value, colorClass }: { label: string, value: number,
     }, [value, prevValue]);
 
     return (
-        <div className={`flex flex-col items-center bg-black/60 backdrop-blur-sm border-b-2 border-${colorClass} p-0.5 md:p-1 w-10 md:w-16 relative transition-all duration-300 ${diff && diff < 0 ? 'animate-shake bg-red-900/40' : ''}`}>
-            <span className={`text-[7px] md:text-[10px] text-${colorClass} uppercase tracking-wider leading-tight`}>{label}</span>
-            <span className={`text-xs md:text-lg font-bold font-mono text-white leading-tight`}>{Math.floor(value)}</span>
+        <div className={`flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm border-b-2 border-${colorClass} p-0.5 md:p-1 w-9 md:w-16 h-8 md:h-auto relative transition-all duration-300 ${diff && diff < 0 ? 'animate-shake bg-red-900/40' : ''}`}>
+            <span className={`text-[6px] md:text-[10px] text-${colorClass} uppercase tracking-wider leading-tight`}>{label}</span>
+            <span className={`text-[10px] md:text-lg font-bold font-mono text-white leading-tight`}>{Math.floor(value)}</span>
             
             {diff !== null && diff !== 0 && (
                 <div className={`absolute -bottom-5 left-0 right-0 text-center font-bold font-mono text-xs animate-bounce ${diff > 0 ? 'text-emerald-400' : 'text-red-500'}`}>
@@ -61,8 +61,8 @@ const CashDisplay = ({ cash }: { cash: number }) => {
     }, [cash, prevCash]);
 
     return (
-        <div className="relative mr-1 md:mr-3">
-            <div className={`font-mono text-xs md:text-xl font-bold leading-tight ${cash < 0 ? 'text-red-500 neon-text' : 'text-emerald-400 neon-text'}`}>
+        <div className="relative mr-0.5 md:mr-3">
+            <div className={`font-mono text-[10px] md:text-xl font-bold leading-tight ${cash < 0 ? 'text-red-500 neon-text' : 'text-emerald-400 neon-text'}`}>
                 ¥{cash.toLocaleString()}
             </div>
             {diff !== null && diff !== 0 && (
@@ -236,12 +236,12 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
       <div className={`absolute inset-0 z-50 pointer-events-none transition-opacity duration-100 ${damageFlash === 'mental' ? 'bg-white/30 mix-blend-difference opacity-100' : 'opacity-0'}`}></div>
 
       {/* 1. HUD LAYER (Fixed Top) */}
-      <header className="absolute top-0 left-0 right-0 z-40 px-2 md:px-4 pt-2 md:pt-4 pb-8 md:pb-12 flex items-start justify-between bg-gradient-to-b from-black/90 to-transparent pointer-events-none">
+      <header className="fixed top-0 left-0 right-0 z-40 px-2 md:px-4 pt-1 md:pt-2 pb-1 md:pb-2 flex items-start justify-between bg-gradient-to-b from-black/95 via-black/90 to-transparent pointer-events-none" style={{ minHeight: 'auto' }}>
         <div className="flex flex-col flex-shrink-0">
-             <div className="text-[9px] md:text-[10px] text-emerald-500 cyber-font border border-emerald-900/50 px-1 md:px-1.5 py-0.5 rounded bg-black/50 w-max mb-0.5 md:mb-1">
+             <div className="text-[9px] md:text-[10px] text-emerald-500 cyber-font border border-emerald-900/50 px-1 md:px-1.5 py-0.5 rounded bg-black/50 w-max mb-0.5">
                 STAGE {gameState.stage}
              </div>
-             <h1 className="text-[10px] md:text-xs font-bold text-zinc-300 cyber-font tracking-wider opacity-80 max-w-[100px] md:max-w-[120px] leading-tight">
+             <h1 className="text-[9px] md:text-xs font-bold text-zinc-300 cyber-font tracking-wider opacity-80 max-w-[90px] md:max-w-[120px] leading-tight">
                 {theme.title}
              </h1>
         </div>
@@ -255,7 +255,7 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
       </header>
 
       {/* 2. MAIN CONTENT LAYER (Scrollable Description + Fixed Interactions) */}
-      <div className="relative z-10 w-full h-full flex flex-col justify-between pt-24 pb-8 px-5">
+      <div className="relative z-10 w-full h-full flex flex-col justify-between pt-14 md:pt-20 pb-8 px-5">
           
           {/* A. Narrative Description (Top/Middle) */}
           <div className="flex-1 overflow-y-auto custom-scrollbar mb-4 relative">
