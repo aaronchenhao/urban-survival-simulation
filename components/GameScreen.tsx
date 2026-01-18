@@ -337,10 +337,17 @@ const GameScreen: React.FC<Props> = ({ gameState, events, onOptionSelected, load
                         <button
                             key={idx}
                             onClick={(e) => {
-                                e.stopPropagation(); // Prevent triggering screen tap
+                                e.preventDefault();
+                                e.stopPropagation();
+                                onOptionSelected(option);
+                            }}
+                            onTouchEnd={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
                                 onOptionSelected(option);
                             }}
                             className="w-full relative group bg-zinc-900/90 backdrop-blur-md border border-zinc-600 active:border-emerald-400 active:bg-zinc-800 p-4 text-left rounded-lg transition-all shadow-lg active:scale-[0.98]"
+                            style={{ touchAction: 'manipulation' }}
                         >
                             <div className="flex items-center justify-between">
                                 <div>
