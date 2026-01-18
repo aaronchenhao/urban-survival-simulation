@@ -6,13 +6,39 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>都市生存模拟 (Urban Survival)</title>
     <link rel="icon" href="/urban-survival-simulation/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/urban-survival-simulation/assets/index-CW4qBgjK.js"></script>
-    <link rel="stylesheet" crossorigin href="/urban-survival-simulation/assets/style-DjJOlVV-.css">
+    <!-- 微信浏览器兼容性检测和降级处理 -->
+    <script>
+      // 检测微信浏览器环境
+      var ua = navigator.userAgent.toLowerCase();
+      var isWeChat = /micromessenger/.test(ua);
+      
+      // 如果检测到可能不兼容的特性，显示提示
+      if (isWeChat) {
+        // 检测 ES6 支持
+        try {
+          eval('class Test {}');
+        } catch(e) {
+          // 如果连 class 都不支持，显示提示
+          document.write('<div style="padding:20px;text-align:center;color:#fff;background:#000;font-size:16px;">您的微信版本可能过低，建议使用浏览器打开以获得最佳体验。</div>');
+        }
+      }
+    </script>
+    <script type="module" crossorigin src="/urban-survival-simulation/assets/index-Nz_Xzwce.js"></script>
+    <link rel="stylesheet" crossorigin href="/urban-survival-simulation/assets/style-xrZwP_ki.css">
   </head>
   <body>
     <div id="root"></div>
+    <!-- 降级处理：如果模块加载失败，显示提示 -->
+    <noscript>
+      <div style="padding:20px;text-align:center;color:#fff;background:#000;">
+        <h2>需要启用 JavaScript</h2>
+        <p>此应用需要 JavaScript 才能正常运行，请在浏览器设置中启用 JavaScript。</p>
+      </div>
+    </noscript>
   </body>
 </html>
