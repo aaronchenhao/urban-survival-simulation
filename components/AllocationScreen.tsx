@@ -50,12 +50,12 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
   const formatMoney = (val: number) => `¥${val.toLocaleString()}`;
 
   return (
-    <div className="flex flex-col h-full w-full bg-black text-zinc-100 font-sans select-none overflow-y-auto custom-scrollbar pb-32 relative">
+    <div className="flex flex-col h-full w-full bg-black text-zinc-100 font-sans select-none overflow-y-auto custom-scrollbar pb-72 md:pb-32 relative">
        {/* Background */}
        <div className="fixed inset-0 pointer-events-none opacity-10" style={{ backgroundImage: `url('${getResourcePath('/noise.svg')}')` }}></div>
        <div className="fixed inset-0 pointer-events-none bg-gradient-to-b from-black via-zinc-900/50 to-emerald-900/10"></div>
 
-       <div className="relative z-10 p-6 max-w-lg mx-auto w-full space-y-8 animate-fade-in-up">
+       <div className="relative z-10 p-4 md:p-6 max-w-lg mx-auto w-full space-y-6 md:space-y-8 animate-fade-in-up">
           
           {/* Header */}
           <header className="border-b border-emerald-500/30 pb-4">
@@ -175,7 +175,7 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
           </section>
 
           {/* 3. Assets */}
-          <section className="space-y-4">
+          <section className="space-y-3 md:space-y-4">
              <h2 className="text-sm font-bold text-emerald-500 uppercase tracking-widest flex items-center">
                 <span className="w-1.5 h-1.5 bg-emerald-500 mr-2"></span>
                 Capital Allocation // 资产配置
@@ -223,25 +223,28 @@ const AllocationScreen: React.FC<Props> = ({ onComplete }) => {
              {/* Insurance -> Trauma Team */}
              <button
                 onClick={() => setInsurance(!insurance)}
-                className={`w-full p-3 rounded border flex justify-between items-center transition-all ${
+                className={`w-full p-3 rounded border flex justify-between items-center transition-all mb-12 md:mb-4 ${
                     insurance ? 'bg-emerald-900/20 border-emerald-500' : 'bg-zinc-900 border-zinc-800'
                 }`}
              >
-                <div className="text-left">
-                    <div className="text-sm font-bold flex items-center gap-2">
+                <div className="text-left flex-1 min-w-0">
+                    <div className="text-sm font-bold flex items-center gap-2 flex-wrap">
                         <span>🛡️ 生物保险 (Bio-Secure)</span>
                         {insurance && <span className="text-[10px] bg-emerald-500 text-black px-1 rounded">ACTIVE</span>}
                     </div>
-                    <div className="text-[10px] text-zinc-500">抵御重大义体故障与急救费用</div>
+                    <div className="text-[10px] text-zinc-500 mt-1">抵御重大义体故障与急救费用</div>
                 </div>
-                <span className={`text-sm font-mono ${insurance ? 'text-red-400' : 'text-zinc-500'}`}>
+                <span className={`text-sm font-mono ml-2 flex-shrink-0 ${insurance ? 'text-red-400' : 'text-zinc-500'}`}>
                     {insurance ? `-¥${COSTS.INSURANCE_PRICE.toLocaleString()}` : 'UNINSURED'}
                 </span>
              </button>
           </section>
+          
+          {/* Extra spacing for mobile to ensure button is not hidden */}
+          <div className="h-8 md:h-0"></div>
 
-          {/* Footer Action */}
-          <div className="fixed bottom-0 left-0 right-0 p-4 bg-black/90 backdrop-blur-md border-t border-zinc-800 z-50 flex justify-center">
+          {/* Footer Action - Ensure enough space above on mobile */}
+          <div className="fixed bottom-0 left-0 right-0 p-3 md:p-4 bg-black/90 backdrop-blur-md border-t border-zinc-800 z-50 flex justify-center" style={{ paddingBottom: 'max(12px, env(safe-area-inset-bottom))' }}>
                 <button
                 onClick={handleStart}
                 disabled={!isValid}
